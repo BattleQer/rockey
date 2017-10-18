@@ -5,9 +5,11 @@
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build-test": "set NODE_ENV=dev&& webpack --config ./build/webpack.build.js",
-    "build-prod": "set NODE_ENV=prod&& webpack --config ./build/webpack.build.js"
+    "dev": "npm run dev-test",
+    "dev-test": "set PRO_ENV=test&& node build/dev-server.js",
+    "dev-prod": "set PRO_ENV=prod&& node build/dev-server.js",
+    "build-test": "set PRO_ENV=test&& webpack --config ./build/webpack-build.js",
+    "build-prod": "set PRO_ENV=prod&& webpack --config ./build/webpack-build.js"
   },
   "dependencies": {
     "axios": "^0.16.2",

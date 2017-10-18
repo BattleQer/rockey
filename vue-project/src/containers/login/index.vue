@@ -69,7 +69,7 @@
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
                         alert('submit!');
-                        this.$router.push('home');
+                        this.$router.push('liveSetting');
                     } else {
                         console.log('error submit!!');
                         return false;

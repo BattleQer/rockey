@@ -1,6 +1,6 @@
 <script>
     import render from 'render/menu';
-    import menuData from '@/assets/script/navMenu.js';
+    import menuData from '@/assets/script/router-menu-m.js';
     export default {
         render(c) {
             return render(c, {

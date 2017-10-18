@@ -3,9 +3,18 @@
         <!--<head-component/>-->
         <div>
             <div class="nav">
-                <nav-component/>
+                <div class="nav-logo el-menu">
+                    直播间管理
+                </div>
+                <div class="nav-menu" >
+                    <nav-component/>
+                </div>
             </div>
+
             <div class="form">
+                <div class="form-title">
+
+                </div>
                 <div class="form-nav">
                     <breadcrumb-component/>
                 </div>
@@ -29,21 +38,5 @@
     }
 </script>
 <style lang="stylus" scoped>
-    @import "~styles-var";
-    .nav
-        position absolute
-        top: 0px
-        bottom: 0
-        width 240px
-        overflow auto
-    .form
-        width auto
-        margin-left 240px;
-        padding 0 25px;
-        .form-nav
-            margin-top 25px;
-        .form-body
-            margin-top 25px;
-            width 750px;
-            margin-lr-auto();
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <el-form ref="form" :model="form" label-width="80px" class="home">
+    <el-form ref="form" :model="form" label-width="80px" class="home content">
         <el-form-item label="活动名称">
             <el-input v-model="form.name"></el-input>
         </el-form-item>
@@ -68,7 +68,6 @@
     }
 </script>
 <style lang="stylus" scoped>
-    @import "~styles-var";
     .home
         margin-lr-auto();
 

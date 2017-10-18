@@ -6,6 +6,7 @@ import Store from './store'
 import ElementUI from 'element-ui'
 import './assets/styles/reset.styl'
 import 'element-ui/lib/theme-default/index.css'
+import './assets/styles/index.styl'
 
 Vue.use(Vuex);
 Vue.use(ElementUI);

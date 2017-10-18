@@ -2,7 +2,7 @@ const http = require('http');
 const express = require('express');
 const app = express();
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.dev.js');
+const webpackConfig = require('./webpack-dev.js');
 const compiler = webpack(webpackConfig);
 //app.use(require('morgan')('short'));
 (function() {
