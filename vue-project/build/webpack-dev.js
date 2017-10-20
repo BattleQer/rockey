@@ -1,5 +1,4 @@
 const OpenBrowserPlugin = require('open-browser-webpack-plugin'),
-    HtmlWebpackPlugin = require('html-webpack-plugin'),
     webpackConfig = require('./webpack-config.js'),
     merge = require('webpack-merge'),
     webpack = require('webpack'),
@@ -12,15 +11,6 @@ module.exports = merge(webpackConfig, {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: utils.assetsRootPath('index.html'),
-            inject: true
-        }),
         new OpenBrowserPlugin({ url: 'http://localhost:10001' }),
-        new webpack.ProvidePlugin({
-            'Config': utils.assetsRootPath('src/config/config-'+process.env.PRO_ENV+'.js'),
-            'axios': 'axios'
-        })
     ]
 });
