@@ -13,7 +13,9 @@
         <el-form-item style="width:100%;">
             <el-button type="primary" style="width:100%;" @click="handleLogin('AccountFrom')">登录</el-button>
         </el-form-item>
+        {{$store.state.login.list}}
     </el-form>
+
 </template>
 
 <script>
@@ -54,18 +56,18 @@
             };
         },
         computed: {
-            count: ()=> {
-                debugger;
-                this.$store.state
+            count () {
+                return this.$store.state.login.count;
             }
         },
         mounted() {
             console.log(Config.host);
             console.log(axios);
-            this.$store.dispatch('test','123');
         },
         methods: {
             handleLogin(formName) {
+                console.log(this.$store);
+                this.$store.dispatch('login/test','123');
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
                         alert('submit!');

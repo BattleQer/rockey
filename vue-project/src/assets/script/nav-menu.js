@@ -152,5 +152,15 @@ export default [
                 path: 'orderList',
             }
         ]
+    },
+    {
+        name: '设置',
+        path: '/userConfig',
+        
+    },
+    {
+        name: '反馈',
+        path: '/userConfig',
+        
     }
 ]
