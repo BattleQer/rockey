@@ -10,7 +10,6 @@
                     <nav-component/>
                 </div>
             </div>
-
             <div class="form">
                 <div class="form-title">
                     <el-dropdown class="downMeun m-right-40">

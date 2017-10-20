@@ -5,7 +5,7 @@ const store = {
         namespaced: true,
         state: {
             count: 0,
-            // list: []
+            list: []
         },
         mutations: {
             test (state,test) {
