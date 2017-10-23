@@ -1,0 +1,73 @@
+
+.top-header{
+  position:fixed;
+  display: block;
+  width: 100%;
+  height:2.333rem;
+  background:#000;
+  top: 0rem;
+  z-index:999
+}
+.top-header .logo{
+  display:inline-block;
+  position:absolute;
+  top: .362rem;
+  left: 1.877rem;
+  width:1.7rem;
+  height:1.7rem;
+  background-image:url('https://img04.aomygod.com/fontend/2017613/imgs/test/logo.png');
+  background-size:1.7rem 1.7rem;
+}
+.top-header .close{
+  width:0.768rem;
+  height:0.768rem;
+  display:inline-block;
+  position:absolute;
+  top:0.84rem;
+  left:0.32rem;
+}
+.top-header .close .o{
+  width:0.64rem;
+  height:0.64rem;
+  font-size:0.806rem;
+  line-height:0.454rem;
+  color:#9a9a9a;
+  border:3px #9a9a9a solid;
+  border-radius:50%;
+  display:inline-block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  text-align:center;
+}
+.top-header .txt{
+  width:4.866rem;
+  height:1.493rem;
+  font-size:0.512rem;
+  position:absolute;
+  top:0.256rem;
+  left:4.26rem;
+}
+.top-header .txt span:first-child{
+  display: block;
+  color:#FFF;
+  line-height:0.746rem;
+}
+.top-header .txt span:nth-child(2){
+  color:#9a9a9a;
+  line-height:0.746rem;
+}
+.top-header .download{
+  width:4.16rem;
+  height:1.493rem;
+  border-radius:.213rem;
+  background-color:#e6465a;
+  color:#FFF;
+  text-decoration:none;
+  font-size:0.597rem;
+  line-height:1.45rem;
+  text-align:center;
+  position:absolute;
+  top:0.362rem;
+  right:0.533rem;
+}
