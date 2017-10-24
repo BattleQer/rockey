@@ -24,7 +24,7 @@ $ gem sources -l
 $ gem install compass                                                     
 
 ##  compass 
-$compass init
+$compass init                                                     
 $compass watch
 
 ## 通过compass编译出来的css文件，在html中直接引用css文件夹下的文件路径
