@@ -6,7 +6,7 @@ http_path = "/"
 css_dir = "css"
 sass_dir = "sass"
 images_dir = "images"
-javascripts_dir = "javascript"
+javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -15,8 +15,18 @@ javascripts_dir = "javascript"
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
 
+# 取消注释
+line_comments = false
+
+# 浏览器调试SCSS
+sourcemap = true
+
+# 缓存
+# cache = "style"
+
+# 输出样式 
+# output_style = ":expanded、:nested 、:compact、:compressed"
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
