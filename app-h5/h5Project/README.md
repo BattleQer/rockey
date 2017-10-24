@@ -13,11 +13,15 @@
 
 # sass使用
 ##  ruby
-安装RUBY 安装COMPASS SASS
-$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ gem sources -l
-$ gem install compass
+安装RUBY 安装COMPASS SASS                                                     
+
+$ gem sources --remove https://rubygems.org/                                                     
+
+$ gem sources -a https://ruby.taobao.org/                                                     
+
+$ gem sources -l                                                     
+
+$ gem install compass                                                     
 
 ##  compass 
 $compass init
