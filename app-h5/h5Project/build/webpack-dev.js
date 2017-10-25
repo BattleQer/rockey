@@ -11,6 +11,6 @@ module.exports = merge(webpackConfig, {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new OpenBrowserPlugin({ url: 'http://localhost:2828' }),
+        new OpenBrowserPlugin({ url: 'http://localhost:10001' }),
     ]
 });

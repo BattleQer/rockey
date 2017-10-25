@@ -13,7 +13,7 @@ module.exports = {
         path: utils.assetsRootPath('dist'),
         filename: './js/[name].js',
         chunkFilename: './js/[name].js',
-        publicPath: './'
+        publicPath: ''
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -68,6 +68,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: utils.assetsRootPath('src/v1-yk-header.html'),
+            inject: true,
+            chunks: ['vendor','main','index']
+        }),
         new HtmlWebpackPlugin({
             filename: 'v1-yk-header.html',
             template: utils.assetsRootPath('src/v1-yk-header.html'),

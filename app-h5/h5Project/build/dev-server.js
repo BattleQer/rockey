@@ -22,12 +22,12 @@ const compiler = webpack(webpackConfig);
 
 // Do anything you like with the rest of your express application.
 app.get("/", function(req, res) {
-    res.sendFile(utils.assetsRootPath('dist/v1-yk-header.html'));
+    res.sendFile(utils.assetsRootPath('./dist/index.html'));
 });
 
 if (require.main === module) {
     var server = http.createServer(app);
-    server.listen(2828, '127.0.0.1', function() {
+    server.listen(10001, '127.0.0.1', function() {
         console.log("Listening on %j", server.address());
     });
 }
