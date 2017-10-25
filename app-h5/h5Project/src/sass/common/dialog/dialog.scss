@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/*dialog*/
+.mask {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    overflow: hidden;
+}
+
+.dialog {
+    border-radius: 2px;
+    z-index: 1000;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    .d-pop {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 2px;
+        display: inline-block;
+        font-family: 'Microsoft YaHei';
+        .d-cnt {
+            font-size: .6rem;
+            color: #000;
+            text-align: center;
+            padding: .4rem .6rem;
+            .loading {
+                font-size: 1.2rem;
+                color: #fff;
+            }
+        }
+
+        .d-btn {
+            table-layout: fixed;
+            display: block;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            border-top:1px solid #CCCCCC!important;
+            a{
+                padding: 0;
+                font-size: .6rem;
+                display: inline-block;
+                width:49%;
+                text-align: center;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                color: #3477FF;
+                border-bottom: 0 none;
+                cursor: pointer;
+            }
+            a:active{
+                background-color: #fff;
+            }
+            a:last-child {
+                border-right: 0 none;
+                border-left: 1px solid #CCCCCC;
+            }
+            a:first-child {
+                border-left: 0 none!important;
+            }
+        }
+    }
+}
+
+.dialog-hide {
+    display: none;
+    -webkit-box-shadow: none;
+}
+
+
+.dialog {
+    width: 100%;
+    text-align: center;
+
+    .d-pop {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: .2rem;
+        overflow: hidden;
+        background-color: #fff;
+
+        .d-cnt {
+            max-width: 11rem;
+            font-size: .6rem;
+        }
+    }
+}
+
+//tips
+#dialog-tips {
+    .d-pop {
+        background-color: #000;
+        opacity: 0.6;
+        .d-cnt {
+            color: #fff;
+        }
+    }
+}

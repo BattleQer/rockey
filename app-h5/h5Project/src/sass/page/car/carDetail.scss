@@ -1,0 +1,32 @@
+@import "../../../sass/common";
+body{
+  margin: 0;
+  background-color: #2e2e30;
+}
+.content{
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  color: #959595;
+  font-size: rem(24);
+  padding:0 rem(30);
+  .title{
+    color: #fff ;
+    font-size: rem(44);
+    padding: rem(40) 0;
+  }
+  .come{
+    color: #565658 ;
+    padding-bottom: rem(60);
+    font-size: rem(24);
+  }
+  //text-align: center;
+  p{
+    padding: rem(28) 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}

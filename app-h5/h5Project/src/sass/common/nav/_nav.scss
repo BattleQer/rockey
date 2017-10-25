@@ -1,0 +1,164 @@
+@import '../dialog/dialog';
+
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+.fix-nav{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    height: rem(86);
+    padding-right: rem(36);
+    -webkit-box-sizing:border-box;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 11;
+    .nav-logo, .arrow{
+        display: block;
+        height: rem(86);
+        text-align: center;
+        background-color: #000;
+        opacity: 0.4;
+        position: absolute;
+        .icon{
+            color: #fff;
+        }
+    }
+    .nav-logo{
+        width: rem(86);
+        height: rem(86);
+        bottom: 0;
+        right: -2.15rem;
+        line-height: rem(86);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        .icon{
+            font-size: rem(80);
+        }
+    }
+    .arrow{
+        width: rem(36);
+        top: 0;
+        right: 0;
+        line-height: rem(86);
+        .icon{
+            font-size: rem(40);
+        }
+    }
+    .nav-list{
+        width: 100%;
+        a{
+            float: left;
+            width: 25%;
+            height: rem(82);
+            color: #999;
+            display: block;
+            text-align: center;
+            line-height: rem(30);
+            padding-top: rem(14);
+            .icon{
+                font-size: rem(40);
+                position: relative;
+                display: block;
+                height: rem(36);
+                .buy-num{
+                    position: absolute;
+                    top: -0.3rem;
+                    left: 56%;
+                    display: block;
+                    width: rem(34);
+                    line-height: rem(34);
+                    text-align: center;
+                    color: #fff;
+                    background-color: #f16320;
+                    border-radius: 50%;
+                    font-size: rem(20);
+                }
+            }
+            p{
+                font-size: rem(24);
+                font-family: 'microsoft yahei';
+            }
+        }
+        .wx-scan{
+            display: none;
+        }
+    }
+}
+
+.wx-fix-nav{
+    .nav-list{
+        a{
+            width: 20%;
+        }
+    }
+}
+
+.fix-nav-wrap {
+    position: fixed;
+    left: 0px;
+    top: rem(88);
+    width: 100%;
+    height: rem(100);
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+    
+}
+.fix-nav {
+    border-bottom: 1px solid #ccc;
+    left: 0px;
+    height: rem(100);
+    padding: 0px;
+    top: rem(88); 
+    bottom: auto;
+    z-index: 13;
+    .nav-list {
+        a {
+            height: rem(100);
+            .icon {
+                font-size : rem(40);
+            }
+            p {
+                margin-top: rem(10);
+                font-size: rem(24);
+            }
+        } 
+    }
+}
+.tips-mask {
+    position:fixed;
+    z-index: 12;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:gray;
+    display: none;
+    @include opacity(80); //传递参数
+    top: rem(88);
+}
+.bd-hidden {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .ui-header {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+    .page-view{
+        padding-top: rem(88);
+    }
+}
