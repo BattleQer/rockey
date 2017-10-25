@@ -6,21 +6,21 @@ const utils = require('./utils.js'),
 module.exports = {
     entry: {
         vendor: ['babel-polyfill'],
-        main: [utils.assetsRootPath('./src/js/main.js')],
-        index: [utils.assetsRootPath('./src/js/index.js')]
+        main: [utils.assetsRootPath('src/js/main.js')],
+        index: [utils.assetsRootPath('src/js/index.js')]
     },
     output: {
         path: utils.assetsRootPath('dist'),
-        filename: './src/js/[name]-[hash:7].js',
-        chunkFilename: './src/js/[name]-[hash:7].js',
-        publicPath: ''
+        filename: './js/[name].js',
+        chunkFilename: './js/[name].js',
+        publicPath: './'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
-            '@': utils.assetsRootPath('../src'),
+            '@': utils.assetsRootPath('src'),
             'vue': 'vue/dist/vue.js',
-            'app': utils.assetsRootPath('../src/js/app'),
+            'app': utils.assetsRootPath('src/js/app.js'),
         }
     },
     module: {
@@ -69,7 +69,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: '.src/v1-yk-header.html',
+            filename: 'v1-yk-header.html',
             template: utils.assetsRootPath('src/v1-yk-header.html'),
             inject: true,
             chunks: ['vendor','main','index']

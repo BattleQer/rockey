@@ -22,7 +22,7 @@ const compiler = webpack(webpackConfig);
 
 // Do anything you like with the rest of your express application.
 app.get("/", function(req, res) {
-    res.sendFile(utils.assetsRootPath('src/v1-yk-header.html'));
+    res.sendFile(utils.assetsRootPath('dist/v1-yk-header.html'));
 });
 
 if (require.main === module) {
