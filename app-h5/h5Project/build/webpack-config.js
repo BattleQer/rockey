@@ -6,12 +6,13 @@ const utils = require('./utils.js'),
 module.exports = {
     entry: {
         vendor: ['babel-polyfill'],
-        index: [utils.assetsRootPath('src/js/main.js')]
+        main: [utils.assetsRootPath('./src/js/main.js')],
+        index: [utils.assetsRootPath('./src/js/index.js')]
     },
     output: {
         path: utils.assetsRootPath('dist'),
-        filename: './js/[name]-[hash:7].js',
-        chunkFilename: './js/[name]-[hash:7].js',
+        filename: './src/js/[name]-[hash:7].js',
+        chunkFilename: './src/js/[name]-[hash:7].js',
         publicPath: ''
     },
     resolve: {
@@ -19,7 +20,7 @@ module.exports = {
         alias: {
             '@': utils.assetsRootPath('../src'),
             'vue': 'vue/dist/vue.js',
-            'app': utils.assetsRootPath('src/js/app'),
+            'app': utils.assetsRootPath('../src/js/app'),
         }
     },
     module: {
@@ -32,10 +33,6 @@ module.exports = {
             {
                 test: /\.css$/,
                 loaders: ['style-loader','css-loader']
-            },
-            {
-                test: /\.(styl|stylus)$/,
-                loaders: [ 'style-loader','css-loader','stylus-loader']
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -60,15 +57,22 @@ module.exports = {
                     limit: 1,
                     name: './fonts/[name].[hash:7].[ext]'
                 }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    minimize: true
+                }
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'v1-yk-header.html',
-            template: 'v1-yk-header.html',
+            filename: '.src/v1-yk-header.html',
+            template: utils.assetsRootPath('src/v1-yk-header.html'),
             inject: true,
-            chunks: ['vendor','index']
+            chunks: ['vendor','main','index']
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendor'],

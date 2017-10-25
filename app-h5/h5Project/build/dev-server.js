@@ -1,5 +1,6 @@
 const http = require('http');
 const express = require('express');
+const utils = require('./utils.js');
 const app = express();
 const webpack = require('webpack');
 const webpackConfig = require('./webpack-dev.js');
@@ -21,7 +22,7 @@ const compiler = webpack(webpackConfig);
 
 // Do anything you like with the rest of your express application.
 app.get("/", function(req, res) {
-    res.sendFile(__dirname+"app-h5/h5Project/src/html/v1-yk-header.html");
+    res.sendFile(utils.assetsRootPath('src/v1-yk-header.html'));
 });
 
 if (require.main === module) {
