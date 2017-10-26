@@ -1,16 +1,11 @@
 @import "./inc";
 @import "./common/reset/reset";
-/*
-Global common style definitions.
-Author: Allex Wang (allex.wxn@gmail.com)
-*/
 
 $fontSize: 46.875; // 750px 宽度
 // 计算宽度
 @function rem($n) {
   @return ($n / $fontSize) * 1rem;
 }
-
 .ui-pri{
     font-family: avenir,arial;
 }
@@ -157,17 +152,6 @@ a{text-decoration: none;}
             border:none;
             overflow: hidden;
         }
-        /*.search-ipt:-moz-placeholder{
-            color: #fff;
-        }
-
-        .search-ipt:-ms-input-placeholder {
-            color: #fff;
-        }
-
-        .search-ipt::-webkit-input-placeholder {
-            color: #fff;
-        }*/
     }
 }
 
@@ -216,7 +200,7 @@ a{text-decoration: none;}
     text-align: center;
     color: #999;
     &:before{
-        content:url(//s1.aomygodstatic.com/gshop/images/loading.gif);
+        // content:url(//s1.aomygodstatic.com/gshop/images/loading.gif);
         vertical-align: middle;
         margin-right: rem(10);
     }
@@ -272,4 +256,7 @@ a{text-decoration: none;}
 .nav, .mod-slider{
     max-width: rem(750);
     margin: 0 auto;
+}
+#root{
+    background-color:red;
 }
