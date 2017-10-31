@@ -1,0 +1,1 @@
+require("../../css/page/album/album.css");
