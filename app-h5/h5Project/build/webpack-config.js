@@ -46,7 +46,8 @@ function getView(globPath, pathDir) {
 var config = {
     entry: Object.assign(entries(), {
         vendor: ['babel-polyfill'],
-        common: utils.assetsRootPath('src/js/common/common.js')
+        common: utils.assetsRootPath('src/js/common/common.js'),
+        jqueryui: utils.assetsRootPath('src/js/common/jqueryui.js'),
     }),
     output: {
         path: path.join(__dirname, "dist"),
@@ -100,7 +101,16 @@ var config = {
             options: {
                 minimize: true
             }
-        }]
+        }
+        // ,{
+        //     test: /\.ejs$/,
+        //     loader: 'ejs-loader',
+        // } ,
+        // {
+        //     test: /\.tpl$/,
+        //     loader: 'ejs-compiled-loader',
+        // } 
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -108,7 +118,7 @@ var config = {
             template: utils.assetsRootPath('src/v1-yk-header.html'),
             inject: true,
             hash: true,
-            chunks: ['vendor', 'common']
+            chunks: ['vendor','jqueryui','common']
         }),
         new ExtractTextPlugin("css/[name].css"), //生成的css样式文件
         new CommonsChunkPlugin({
@@ -118,11 +128,13 @@ var config = {
         new webpack.ProvidePlugin({
             'Config': utils.assetsRootPath('src/config/config-' + process.env.PRO_ENV + '.js'),
             $: 'jquery',
+            jQuery:'jquery'
         })
     ]
 };
-var viesObj = getView('src/html/*.html', 'src/html/')
+var viesObj = getView('src/html/*.html', 'src/html/');
 var pages = Object.keys(viesObj);
+
 pages.forEach(function(pathname) {
     var htmlName = viesObj[pathname]
     var conf = {
@@ -130,7 +142,7 @@ pages.forEach(function(pathname) {
         template: './src/html/' + htmlName + '.html', //html模板路径
         inject: 'body', //js插入的位置，true/'head'/'body'/false
         hash: true, //为静态资源生成hash值
-        chunks: ['vendor', "common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: ["vendor","jqueryui","common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: { //压缩HTML文件    
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符
