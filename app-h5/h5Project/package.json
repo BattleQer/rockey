@@ -12,6 +12,8 @@
     "build-prod": "set PRO_ENV=prod&& webpack --config ./build/webpack-build.js"
   },
   "dependencies": {
+    "ejs-compiled-loader": "^1.1.0",
+    "ejs-loader": "^0.3.0",
     "vue": "^2.4.2"
   },
   "devDependencies": {
