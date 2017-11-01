@@ -1,5 +1,4 @@
 /*dialog*/
-/* line 4, ../../../sass/common/dialog/dialog.scss */
 .mask {
   position: fixed;
   top: 0px;
@@ -11,7 +10,6 @@
   overflow: hidden;
 }
 
-/* line 15, ../../../sass/common/dialog/dialog.scss */
 .dialog {
   border-radius: 2px;
   z-index: 1000;
@@ -21,26 +19,22 @@
   top: 0;
   opacity: 0;
 }
-/* line 24, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 2px;
   display: inline-block;
   font-family: 'Microsoft YaHei';
 }
-/* line 29, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-cnt {
   font-size: .6rem;
   color: #000;
   text-align: center;
   padding: .4rem .6rem;
 }
-/* line 34, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-cnt .loading {
   font-size: 1.2rem;
   color: #fff;
 }
-/* line 40, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-btn {
   table-layout: fixed;
   display: block;
@@ -49,7 +43,6 @@
   text-align: center;
   border-top: 1px solid #CCCCCC !important;
 }
-/* line 47, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-btn a {
   padding: 0;
   font-size: .6rem;
@@ -62,32 +55,26 @@
   border-bottom: 0 none;
   cursor: pointer;
 }
-/* line 59, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-btn a:active {
   background-color: #fff;
 }
-/* line 62, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-btn a:last-child {
   border-right: 0 none;
   border-left: 1px solid #CCCCCC;
 }
-/* line 66, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-btn a:first-child {
   border-left: 0 none !important;
 }
 
-/* line 73, ../../../sass/common/dialog/dialog.scss */
 .dialog-hide {
   display: none;
   -webkit-box-shadow: none;
 }
 
-/* line 79, ../../../sass/common/dialog/dialog.scss */
 .dialog {
   width: 100%;
   text-align: center;
 }
-/* line 83, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -95,18 +82,17 @@
   overflow: hidden;
   background-color: #fff;
 }
-/* line 90, ../../../sass/common/dialog/dialog.scss */
 .dialog .d-pop .d-cnt {
   max-width: 11rem;
   font-size: .6rem;
 }
 
-/* line 99, ../../../sass/common/dialog/dialog.scss */
 #dialog-tips .d-pop {
   background-color: #000;
   opacity: 0.6;
 }
-/* line 102, ../../../sass/common/dialog/dialog.scss */
 #dialog-tips .d-pop .d-cnt {
   color: #fff;
 }
+
+/*# sourceMappingURL=dialog.css.map */
