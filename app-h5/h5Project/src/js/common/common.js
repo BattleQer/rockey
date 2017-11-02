@@ -1,7 +1,7 @@
-require("../../css/common.css");
+require("../../css/common/common.css")
 import vue from "vue"
-$( "#radio" ).buttonset();
-
+import NativeShare from 'nativeshare'
+require("jqueryui")
 var app = new vue({
     el: '#content',
     data: {
@@ -40,4 +40,5 @@ var app = new vue({
         
     }
 })
-$( "#radio" ).buttonset();
+
+$("#radio").buttonset();
