@@ -47,7 +47,6 @@ var config = {
     entry: Object.assign(entries(), {
         vendor: ['babel-polyfill'],
         common: utils.assetsRootPath('src/js/common/common.js'),
-        jqueryui: utils.assetsRootPath('src/js/common/jqueryui.js'),
     }),
     output: {
         path: path.join(__dirname, "dist"),
@@ -61,6 +60,8 @@ var config = {
             '@': utils.assetsRootPath('src'),
             'vue': 'vue/dist/vue.js',
             'app': utils.assetsRootPath('src/js/app.js'),
+            'jqueryui':utils.assetsRootPath('src/js/common/jqueryui.js'),
+            'nativeshare': utils.assetsRootPath('src/js/common/nativeShare.js')
         }
     },
     module: {
@@ -116,9 +117,9 @@ var config = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: utils.assetsRootPath('src/v1-yk-header.html'),
-            inject: true,
+            inject: "body",
             hash: true,
-            chunks: ['vendor','jqueryui','common']
+            chunks: ['vendor','common']
         }),
         new ExtractTextPlugin("css/[name].css"), //生成的css样式文件
         new CommonsChunkPlugin({
@@ -128,7 +129,7 @@ var config = {
         new webpack.ProvidePlugin({
             'Config': utils.assetsRootPath('src/config/config-' + process.env.PRO_ENV + '.js'),
             $: 'jquery',
-            jQuery:'jquery'
+            jQuery:'jquery',
         })
     ]
 };
@@ -142,7 +143,7 @@ pages.forEach(function(pathname) {
         template: './src/html/' + htmlName + '.html', //html模板路径
         inject: 'body', //js插入的位置，true/'head'/'body'/false
         hash: true, //为静态资源生成hash值
-        chunks: ["vendor","jqueryui","common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: ["vendor","common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: { //压缩HTML文件    
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符
