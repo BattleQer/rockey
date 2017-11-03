@@ -16,6 +16,73 @@
     </script>
 </head>
 <style>
+.top{
+        position:fixed;        
+        display: block;
+	height:2.3rem;	
+	background:#222324;
+        width: 100%;
+        z-index:11
+}
+.top .logo{
+	display:inline-block;
+	position:absolute;
+	top: .362rem;
+	left: 1.877rem;
+        width:1.65rem;
+        height:1.65rem;
+        background-image:url('https://img04.aomygod.com/fontend/2017613/imgs/test/logo.png');
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+}
+.top .close{
+	width:0.8rem;
+	height:0.8rem;
+	display:inline-block;
+	position:absolute;
+	top:0.84rem;
+	left:0.32rem;
+        background-image:url('https://img04.aomygod.com/fontend/201781/screen/close_img1.png');
+    background-size:100% 100%;
+        background-repeat:no-repeat;
+
+}
+
+.top .txt{
+	width:4.866rem;
+        height:1.493rem;
+        font-size:0.554rem;
+        position:absolute;
+        top:0.36rem;
+        left:4.26rem;
+}
+.top .txt span:first-child{
+	display: block;
+        color:#FFF;
+	line-height:0.746rem;
+}
+.top .txt span:nth-child(2){
+        font-size:0.512rem;
+	color:#9a9a9a;
+	line-height:0.746rem;
+}
+.top .download{
+	width:4.16rem;
+	height:1.493rem;
+	border-radius:.213rem;
+	background-color:#e6465a;
+	color:#FFF;
+	text-decoration:none;
+	font-size:0.597rem;
+	line-height:1.45rem;
+	text-align:center;
+	position:absolute;
+	top:0.362rem;
+	right:0.533rem;
+}
+
+</style>
+<style>
     button {
         padding: 15px;
     }
@@ -24,6 +91,16 @@
 <body>
     <!-- <div id='root' style=""> -->
     <!-- <embed type="text/html" src="html/head.html"> -->
+	<div class="top">
+        <a  class="close">        
+        </a>
+        <div class="logo"></div>
+        <div class="txt">
+        	<span>下载奥买家全球购</span>
+            <span>挑遍全世界</span>
+        </div>
+        <a   href="javascript:;"  class="download" id="btnOpenApp" data-bpm="0.1.0.1.14.0">立即打开</a>
+    </div>
     <form>
         <fieldset>
             <legend>Favorite jQuery Project</legend>
@@ -75,39 +152,86 @@
         <button onclick="setTitle('fa-ge NativeShare')">设置标题</button>
     </div>
 </body>
-
+<script src="https://static.mlinks.cc/scripts/dist/mlink.min.js?v=110"></script>
 <script>
-    var nativeShare = new NativeShare()
-    var shareData = {
-        title: 'NativeShare',
-        desc: 'NativeShare是一个整合了各大移动端浏览器调用原生分享的插件',
-        // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-        link: 'https://github.com/fa-ge/NativeShare',
-        icon: 'https://pic3.zhimg.com/v2-080267af84aa0e97c66d5f12e311c3d6_xl.jpg',
-        // 不要过于依赖以下两个回调，很多浏览器是不支持的
-        success: function() {
-            alert('success')
-        },
-        fail: function() {
-            alert('fail')
-        }
-    }
-    nativeShare.setShareData(shareData)
+ function GetQueryString(name){  
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+        var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+        var context = "";  
+        if (r != null)  
+            context = r[2];  
+        reg = null;  
+        r = null;  
+        return context == null || context == "" || context == "undefined" ? "" : context;  
+    };
+    
+    var agent = navigator.userAgent.toLowerCase();
 
-    function call(command) {
-        try {
-            nativeShare.call(command)
-        } catch (err) {
-            // 如果不支持，你可以在这里做降级处理
-            alert(err.message)
-        }
-    }
+    var _mwKey = '',
+        _mw_ck = GetQueryString('mw_ck') ? GetQueryString('mw_ck') : '',
+        _count = GetQueryString('count') ? GetQueryString('count') : '',
+        _isNewuser = GetQueryString('isNewuser') ? GetQueryString('isNewuser') : '',
+        _isLogin = GetQueryString('isLogin') ? GetQueryString('isLogin') : '',
+        _deviceId = GetQueryString('deviceId') ? GetQueryString('deviceId') : '',
+        _channel = GetQueryString('channel') ? GetQueryString('channel') : '';
 
-    function setTitle(title) {
-        nativeShare.setShareData({
-            title: title,
-        })
+    if(agent.match(/android/i) == "android"){
+        _mwKey = GetQueryString('mwKeyAndroid') ? GetQueryString('mwKeyAndroid') : '' 
+    }else{
+        _mwKey = GetQueryString('mwKeyIOS') ? GetQueryString('mwKeyIOS') : ''
+    };
+
+    new Mlink({
+        mlink: "https://a.mlinks.cc/ABCD", //首页详情页
+        button: document.querySelector('a#btnOpenApp'),
+        autoLaunchApp : false,
+        autoRedirectToDownloadUrl: true,
+        downloadWhenUniversalLinkFailed: false,
+        inapp : false,
+        params: {
+            mwKey : _mwKey,
+            mw_ck : _mw_ck,
+            count : _count,
+            isNewuser : _isNewuser,
+            isLogin : _isLogin,
+            channel : _channel,
+            deviceId : _deviceId, 
+            channelName: "name",
+        	actId: "pc66336",
+            currentUrl: window.location.href + "index.html"
+        }
+    });
+var nativeShare = new NativeShare()
+var shareData = {
+    title: 'NativeShare',
+    desc: 'NativeShare是一个整合了各大移动端浏览器调用原生分享的插件',
+    // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
+    link: 'https://github.com/fa-ge/NativeShare',
+    icon: 'https://pic3.zhimg.com/v2-080267af84aa0e97c66d5f12e311c3d6_xl.jpg',
+    // 不要过于依赖以下两个回调，很多浏览器是不支持的
+    success: function() {
+        alert('success')
+    },
+    fail: function() {
+        alert('fail')
     }
+}
+nativeShare.setShareData(shareData)
+
+function call(command) {
+    try {
+        nativeShare.call(command)
+    } catch (err) {
+        // 如果不支持，你可以在这里做降级处理
+        alert(err.message)
+    }
+}
+
+function setTitle(title) {
+    nativeShare.setShareData({
+        title: title,
+    })
+}
 </script>
 
 
