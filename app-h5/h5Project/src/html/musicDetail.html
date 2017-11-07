@@ -1,17 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
 
+	<title>一首歌</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="demo" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="" name="author" />
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="ML-Config" content="fullscreen=yes,preventMove=no" />
 </head>
 
 <body>
-    <div id='content' style="">
+<!--模糊画布-->
+<div id="content">
+</div>
+<div id="root">
+	
+	<div class="playerMain">
 
-    </div>
+		<div class="middle">
+
+			<div class="mainWrap">
+
+				<div class="leftBar">
+					<audio id="audio" src="/./song/2.mp3"></audio>
+				</div>
+
+				<div class="mainBody">
+
+				<div class="mainOuther">
+
+					<div id="lyr"></div>
+
+				</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="bottom">
+
+			<div class="playerWrap">
+				<div class="playInfo">
+
+					<div class="playerLength">
+
+						<div class="position">00:00</div>
+
+						<div class="progress">
+
+							<div class="pro1"></div>
+
+							<div class="pro2">
+
+							</div> 
+
+						</div>
+						<a href="#" class="dian"></a>
+						<div class="duration">03:35</div>
+
+					</div>
+
+				</div>
+
+				<div class="playerCon">
+					<a href="#" class="pbtn prevdown1"></a>
+					
+					<a href="#" class="pbtn prevBtn"></a>
+
+					<a href="#" class="pbtn playBtn" isplay="0"></a>
+
+					<a href="#" class="pbtn nextBtn"></a>
+
+					<a href="#" class="pbtn prevdown2"></a>
+
+				</div>
+				<div class="playerDown">
+					<a href="#" class="pbtn prevdown3"></a>
+					
+					<a href="#" class="pbtn prevdown4"></a>
+
+					<a href="#" class="pbtn prevdown5"></a>
+
+					<a href="#" class="pbtn prevdown6"></a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
 </body>
+<script>
 
+</script>
 
 </html>

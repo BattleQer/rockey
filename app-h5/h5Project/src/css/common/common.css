@@ -814,11 +814,6 @@ a {
     margin: 0 auto;
 }
 
-#root {
-    background-color: red;
-}
-
-
 /*# sourceMappingURL=common.css.map */
 
 
@@ -984,12 +979,11 @@ a {
 #root {
     position: fixed;
     width: 100%;
-    max-width: 750rem;
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.2)!important;
-    background-color: #000;
+/*    background-color: rgba(0, 0, 0, 0.2)!important;
+    background-color: #000;*/
     filter: Alpha(opacity=20);
     z-index: 999
 }
