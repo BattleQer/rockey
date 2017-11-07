@@ -60,57 +60,57 @@ var config = {
             '@': utils.assetsRootPath('src'),
             'vue': 'vue/dist/vue.js',
             'app': utils.assetsRootPath('src/js/app.js'),
-            'jqueryui':utils.assetsRootPath('src/js/common/jqueryui.js'),
+            'jqueryui': utils.assetsRootPath('src/js/common/jqueryui.js'),
             'nativeshare': utils.assetsRootPath('src/js/common/nativeShare.js')
         }
     },
     module: {
         rules: [{
-            test: /\.js$/,
-            loader: 'babel-loader',
-            include: utils.assetsRootPath('src'),
-        }, {
-            test: /\.css$/,
-            loader: ExtractTextPlugin.extract("css-loader")
-        }, {
-            test: /\.scss$/,
-            loader: ExtractTextPlugin.extract("sass-loader")
-        }, {
-            test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-            loader: 'url-loader',
-            options: {
-                limit: 1,
-                name: './image/[name].[hash:7].[ext]'
+                test: /\.js$/,
+                loader: 'babel-loader',
+                include: utils.assetsRootPath('src'),
+            }, {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("css-loader")
+            }, {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract("sass-loader")
+            }, {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 1,
+                    name: './image/[name].[hash:7].[ext]'
+                }
+            }, {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'file-loader',
+                options: {
+                    limit: 1,
+                    name: './song/[name].[ext]'
+                }
+            }, {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'file-loader',
+                options: {
+                    limit: 1,
+                    name: './fonts/[name].[hash:7].[ext]'
+                }
+            }, {
+                test: /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    minimize: true
+                }
             }
-        }, {
-            test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-            loader: 'url-loader',
-            options: {
-                limit: 1,
-                name: './media/[name].[hash:7].[ext]'
-            }
-        }, {
-            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-            loader: 'url-loader',
-            options: {
-                limit: 1,
-                name: './fonts/[name].[hash:7].[ext]'
-            }
-        }, {
-            test: /\.html$/,
-            loader: 'html-loader',
-            options: {
-                minimize: true
-            }
-        }
-        // ,{
-        //     test: /\.ejs$/,
-        //     loader: 'ejs-loader',
-        // } ,
-        // {
-        //     test: /\.tpl$/,
-        //     loader: 'ejs-compiled-loader',
-        // } 
+            // ,{
+            //     test: /\.ejs$/,
+            //     loader: 'ejs-loader',
+            // } ,
+            // {
+            //     test: /\.tpl$/,
+            //     loader: 'ejs-compiled-loader',
+            // } 
         ]
     },
     plugins: [
@@ -119,7 +119,7 @@ var config = {
             template: utils.assetsRootPath('src/v1-yk-header.html'),
             inject: "body",
             hash: true,
-            chunks: ['vendor','common']
+            chunks: ['vendor', 'common']
         }),
         new ExtractTextPlugin("css/[name].css"), //生成的css样式文件
         new CommonsChunkPlugin({
@@ -129,7 +129,7 @@ var config = {
         new webpack.ProvidePlugin({
             'Config': utils.assetsRootPath('src/config/config-' + process.env.PRO_ENV + '.js'),
             $: 'jquery',
-            jQuery:'jquery',
+            jQuery: 'jquery',
         })
     ]
 };
@@ -143,7 +143,7 @@ pages.forEach(function(pathname) {
         template: './src/html/' + htmlName + '.html', //html模板路径
         inject: 'body', //js插入的位置，true/'head'/'body'/false
         hash: true, //为静态资源生成hash值
-        chunks: ["vendor","common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: ["vendor", "common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: { //压缩HTML文件    
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符
