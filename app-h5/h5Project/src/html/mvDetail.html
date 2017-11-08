@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
 <head>
     <title>demo</title>
@@ -12,69 +12,95 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no,email=no,address=no" />
     <meta name="ML-Config" content="fullscreen=yes,preventMove=no" />
-
     <title>Title</title>
 </head>
-
-
 <body>
-    <div class="content" id="root">
-        <div class="title">别人开车用来拉客，你开这车只管放 心拉轰！
+    <div class="content" id="content">
+        <!-- MV -->
+        <div class="mv-play">
+
         </div>
-        <div class="come">来源太平洋汽车网
-            <div class="time"></div>
+        <!-- 下载栏 -->
+        <div class="mv-down">
+			<div class="down_top">
+                <div class="singer">
+                    <span class="singer_img"></span>
+                    <span class="singer_name">权志龙</span>
+                </div>
+                <div class="singer_detail">
+                    这是一个华丽丽的MV标题，当然可能会超过一行啦，但系如果超过两行就会这样子的了，哈哈哈哈哈
+                </div>
+                <div class="singer_other">
+                    <span>2017-09-07</span>
+                    <span>93.7万播放次数</span>
+                </div>
+            </div>
+            <div class="down_bottom">
+				<div class="bottom_p bottom_p1">					
+			
+						<div class="p1_img">
+						</div>
+						<div>
+							评论
+						</div>
+						
+				
+				</div>
+				<div class="bottom_p bottom_p2">					
+				
+						<div class="p2_img">
+						</div>
+						<div>
+							下载
+						</div>
+					
+				</div>
+				<div class="bottom_p bottom_p3">					
+
+					<div class="p3_img">
+					</div>
+					<div>
+						收藏
+					</div>
+
+				</div>
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="copyright">
-            Copyright@Rockey-demo2017，All Rights Reserved<br> 版权所有&copy;
+        <!-- 推荐 -->
+       <div class="mv-rec">
+			<div class="rec_title">
+                <span class="rec_mv">推荐MV</span>
+				<span class="rec_more">更精彩 > </span>
+            </div>
+			<div class="rec_show" > 
+				<div class="show_mv" v-for = "item in mvList">
+					<div class="mv"></div>
+					<div class="mv_title"> {{item.title}}</div>
+					<div class="mv_user"> {{item.user}}</div>
+				</div>
+				
+			</div>
+        </div> 
+        <!-- 评论区 -->
+        <div class="mv-com">
+            <div class="com_title">
+                最新评论
+            </div>
+            <div class="com_list">
+                <li class="com_list_li" v-for="item in com_list">
+                    <div class="li_img"></div>
+                    <div class="li_detail">
+                        <span class="acc">{{item.acc}}</span>
+                        <span class="love">{{item.love}}</span>
+                        <div class="dec_time">{{item.time}}</div>
+                        <div class="descrobe">{{item.descrobe}}</div>
+
+                    </div>
+                </li>
+            </div>
         </div>
+
     </div>
 </body>
-<script>
-    ! function(e) {
-        function h() {
-            var a = f.getBoundingClientRect().width;
-            640 < a / b && (a = 640 * b);
-            a /= 16;
-            f.style.fontSize = a + "px";
-            e.rem = a
-        }
-
-        function k(a, b, c, e) {
-            var d;
-            return function() {
-                var f = e || this,
-                    g = arguments,
-                    h = c && !d;
-                clearTimeout(d);
-                d = setTimeout(function() {
-                    d = null;
-                    c || a.apply(f, g)
-                }, b);
-                h && a.apply(f, g)
-            }
-        }
-        var b, a, d, c = e.document,
-            g = e.navigator,
-            f = c.documentElement,
-            i = c.querySelector('meta[name="viewport"]');
-        d = c.querySelector('meta[name="flexible"]');
-        i ? (d = i.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/)) && (a = parseFloat(d[2]), b = parseInt(1 / a)) : d && (d = d.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/)) && (b = parseFloat(j[2]), a = parseFloat((1 / b).toFixed(2)));
-        !b && !a && (b = e.devicePixelRatio, b = g.appVersion.match(/android/gi) || g.appVersion.match(/iphone/gi) ? 3 <= b ? 3 : 2 <= b ? 2 : 1 : 1, a = 1 / b);
-        f.setAttribute("data-dpr", b);
-        i || (a = '<meta name="viewport" content="width=device-width, initial-scale=' + a + ", maximum-scale=" + a + ", minimum-scale=" + a + ', user-scalable=no" />', f.firstElementChild ? (g = c.createElement("div"), g.innerHTML = a, f.firstElementChild.appendChild(g.firstChild)) : c.write(a));
-        e.dpr = b;
-        e.addEventListener("resize", k(h, 50), !1);
-        e.addEventListener("pageshow", k(function(a) {
-            a.persisted && h()
-        }, 300), !1);
-        "complete" === c.readyState ? c.body.style.fontSize = 12 * b + "px" : c.addEventListener("DOMContentLoaded", function() {
-            c.body.style.fontSize = 12 * b + "px"
-        }, !1);
-        h()
-    }(window);
-</script>
-
 
 </html>

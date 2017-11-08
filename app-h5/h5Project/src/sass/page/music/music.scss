@@ -24,13 +24,13 @@ a{text-decoration: none;}
 .playerCon{    
 	position: relative;
     width: rem(750);
-    height: 4rem;
+    height: 3.8rem;
     margin: auto;
 }
 .playerDown{
 	position: relative;
     width: rem(750);
-    height: 3rem;
+    height: 2.8rem;
     margin: auto;
 }
 .prevdown1{
@@ -53,8 +53,8 @@ a{text-decoration: none;}
 }
 .pbtn{width:2.8rem;height: 2.8rem;position: relative;display:inline-block;background-position: center;}
 .prevBtn{background:url("../../../image/icon_prev_music@2x.png") 100% 100% no-repeat ;background-position: center;}
-.playBtn{width:3.5rem;height:3.5rem;background:url("../../../image/icon_bofang_music@2x.png") 100% 100% no-repeat ;}
-.playBtn{width:3.5rem;height:3.5rem;background:url("../../../image/icon_stop_music.png") 100% 100% no-repeat ;}
+.playBtn{width:3.5rem;height:3.5rem;background:url("../../../image/icon_bofang_music@2x.png") 100% 100% no-repeat ;background-position: center;}
+.playBtn{width:3.5rem;height:3.5rem;background:url("../../../image/icon_stop_music.png") 100% 100% no-repeat ;background-position: center;}
 .nextBtn{background:url("../../../image/icon_next_music@2x.png") 100% 100% no-repeat ;background-position: center;}
 .playInfo{position: relative;}
 .trackInfo{position: absolute;width: 100%;height:18px;line-height: 18px;top: 20px;color: #fff;}

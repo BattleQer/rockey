@@ -29,8 +29,8 @@ $(window).on('load', function() {
     audio.addEventListener('ended', audioEnded, false);
     getReady(sid); //准备播放
     mPlay(); //显示歌词
-    // window.setInterval(scrollBar, delay);
-    // window.setInterval(mPlay, 100);
+    window.setInterval(scrollBar, delay);
+    window.setInterval(mPlay, 100);
 });
 $(function() {
     // /*底部进度条控制*/
@@ -172,11 +172,6 @@ function scrollBar() //设置滚动条的滚动
 function getReady(s) //在显示歌词前做好准备工作 
 {
     var ly = getLy(s); //得到歌词
-    //alert(ly);
-    // lytext.length=0;
-    // lytime.length=0;
-    // lytext = new Array();
-    // lytime = new Array();
     if (ly == "") {
         $("#lry").html("本歌暂无歌词！");
     };

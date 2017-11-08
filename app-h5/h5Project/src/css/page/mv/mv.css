@@ -1,3 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
+body {
+  width: 100%;
+  height: 28rem;
+  overflow: auto;
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  width: 15.40267rem;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  font-size: 0.59733rem;
+}
+.content .mv-play {
+  height: 9.00267rem;
+}
+.content .mv-down {
+  height: 8.17067rem;
+  border-bottom: 0.02133rem solid #dddddd;
+}
+.content .mv-down .down_top {
+  border-bottom: 0.02133rem solid #dddddd;
+  height: 5.16267rem;
+}
+.content .mv-down .down_top .singer {
+  height: 2.176rem;
+}
+.content .mv-down .down_top .singer .singer_img {
+  width: 1.70667rem;
+  height: 1.70667rem;
+  background-position: center;
+  background: url("../../../image/weixin.png") no-repeat;
+  background-size: contain;
+  border-radius: 0.10667rem;
+  float: left;
+}
+.content .mv-down .down_top .singer .singer_name {
+  color: #999;
+  font-weight: bold;
+  line-height: 1.74933rem;
+  padding-left: 0.21333rem;
+}
+.content .mv-down .down_top .singer_detail {
+  color: #333;
+  width: 100%;
+  height: 1.70667rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.content .mv-down .down_top .singer_other {
+  height: 1.28rem;
+}
+.content .mv-down .down_top .singer_other span {
+  color: #999;
+  font-size: 0.512rem;
+  height: 1.28rem;
+  width: 7.59467rem;
+  display: inline-block;
+}
+.content .mv-down .down_bottom {
+  height: 2.98667rem;
+}
+.content .mv-down .down_bottom .bottom_p {
+  width: 4.992rem;
+  height: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+}
+.content .mv-down .down_bottom .bottom_p1 .p1_img {
+  margin-top: .5rem;
+  width: 0.93867rem;
+  height: 0.93867rem;
+  background-position: center;
+  background: url("../../../image/icon_msn_nearplay.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .mv-down .down_bottom .bottom_p2 .p2_img {
+  margin-top: .5rem;
+  width: 0.93867rem;
+  height: 0.93867rem;
+  background-position: center;
+  background: url("../../../image/icon_download_nearplay.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .mv-down .down_bottom .bottom_p3 .p3_img {
+  margin-top: .5rem;
+  width: 0.93867rem;
+  height: 0.93867rem;
+  background-position: center;
+  background: url("../../../image/icon_like_nearplay.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .mv-rec {
+  height: 8.53333rem;
+}
+.content .mv-rec .rec_title {
+  padding-top: 0.81067rem;
+  padding-bottom: 0.21333rem;
+  height: 0.85333rem;
+  font-weight: bold;
+}
+.content .mv-rec .rec_title .rec_more {
+  float: right;
+  color: #ddd;
+  font-size: 0.512rem;
+}
+.content .mv-rec .rec_show {
+  height: auto;
+  width: 100%;
+}
+.content .mv-rec .rec_show .show_mv {
+  width: 7.68rem;
+  height: 6.44267rem;
+  display: inline-block;
+  padding-right: 0.02133rem;
+}
+.content .mv-rec .rec_show .show_mv .mv {
+  height: 4.30933rem;
+  width: 100%;
+}
+.content .mv-rec .rec_show .show_mv .mv_title {
+  height: 0.96rem;
+  padding-top: 0.21333rem;
+  padding-bottom: 0.08533rem;
+  font-size: 0.68267rem;
+  font-weight: bold;
+}
+.content .mv-rec .rec_show .show_mv .mv_user {
+  color: #999;
+  height: 0.85333rem;
+}
+.content .mv-com {
+  height: auto;
+  padding-top: 1.28rem;
+}
+.content .mv-com .com_title {
+  height: 0.85333rem;
+  width: 100%;
+}
+.content .mv-com .com_list {
+  height: auto;
+  width: 100%;
+}
+.content .mv-com .com_list .com_list_li {
+  height: 5.33333rem;
+  border-bottom: 0.02133rem solid #dddddd;
+}
+.content .mv-com .com_list .com_list_li .li_img {
+  margin: 0.64rem 0.42667rem 2.98667rem 0;
+  height: 1.70667rem;
+  width: 1.70667rem;
+  background: url("../../../image/weixin.png") no-repeat;
+  border-radius: 0.10667rem;
+  float: left;
+  background-size: contain;
+}
+.content .mv-com .com_list .com_list_li .li_detail {
+  position: relative;
+  padding-top: 0.64rem;
+  height: 4.672rem;
+  width: 13.14133rem;
+  display: inline-block;
+}
+.content .mv-com .com_list .com_list_li .li_detail .acc {
+  color: #999;
+}
+.content .mv-com .com_list .com_list_li .li_detail .love {
+  float: right;
+  color: #999;
+  padding-right: 1.06667rem;
+}
+.content .mv-com .com_list .com_list_li .li_detail .love::after {
+  content: "";
+  position: absolute;
+  padding-left: 0.21333rem;
+  width: 0.55467rem;
+  height: 0.704rem;
+  background: url("../../../image/icon_liked_mvdetails_mv@2x.png") no-repeat;
+  background-size: contain;
+}
+.content .mv-com .com_list .com_list_li .li_detail .dec_time {
+  color: #999;
+  font-size: 0.512rem;
+  padding: 0.29867rem 0;
+}
+.content .mv-com .com_list .com_list_li .li_detail .descrobe {
+  color: #333;
+  width: 12.50133rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 /*# sourceMappingURL=mv.css.map */

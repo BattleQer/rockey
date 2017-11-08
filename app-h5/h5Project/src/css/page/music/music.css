@@ -92,14 +92,14 @@ a {
 .playerCon {
   position: relative;
   width: 16rem;
-  height: 4rem;
+  height: 3.8rem;
   margin: auto;
 }
 
 .playerDown {
   position: relative;
   width: 16rem;
-  height: 3rem;
+  height: 2.8rem;
   margin: auto;
 }
 
@@ -144,12 +144,14 @@ a {
   width: 3.5rem;
   height: 3.5rem;
   background: url("../../../image/icon_bofang_music@2x.png") 100% 100% no-repeat;
+  background-position: center;
 }
 
 .playBtn {
   width: 3.5rem;
   height: 3.5rem;
   background: url("../../../image/icon_stop_music.png") 100% 100% no-repeat;
+  background-position: center;
 }
 
 .nextBtn {
