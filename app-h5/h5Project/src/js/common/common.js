@@ -50,6 +50,27 @@ $("#radio").buttonset();
 var app = new vue({
     el: '#content',
     data: {
+        albumList: [{
+            name: "A.I.N.I",
+            type1: false,
+            type2: true,
+            album: "what's going on"
+        }, {
+            name: "A.I.N.I",
+            type1: false,
+            type2: true,
+            album: "what's going on"
+        }, {
+            name: "A.I.N.I",
+            type1: false,
+            type2: true,
+            album: "what's going on"
+        }, {
+            name: "A.I.N.I",
+            type1: false,
+            type2: true,
+            album: "what's going on"
+        }],
         com_list: [{
             img: "1111",
             acc: "小甜甜的你",

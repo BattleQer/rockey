@@ -4,20 +4,7 @@ $fontSize: 46.875; // 750px 宽度
   @return ($n / $fontSize) * 1rem;
 }
 
-*{padding: 0;margin: 0;}
-body{width: 100%;height: 28rem;overflow:auto;font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;}
-li{list-style: none;}
-input{border:0;}
-input:focus{outline: none;}
-html { overflow-y: hidden;overflow-x:hidden;}
-a{text-decoration: none;}
 .content{
-
-	width:rem(722);
-	position:relative;
-	margin:0 auto;
-	height:auto;
-	font-size:rem(28);
 	.mv-play{
 		height:rem(422)
 	}
@@ -155,70 +142,5 @@ a{text-decoration: none;}
 			}
 		}
 	}
-	.mv-com{
-		height:auto;
-		padding-top:rem(60);
-		.com_title{
-			height: 0.85333rem;
-   			width: 100%;
-		}
-		.com_list{
-			height:auto;
-			width:100%;
-			.com_list_li{
-				height:rem(250);
-				border-bottom:rem(1) solid #dddddd;
-				.li_img{
-					margin:rem(30) rem(20) rem(140) 0;
-					height:rem(80);
-					width:rem(80);
-					background:url("../../../image/weixin.png") no-repeat;
-					border-radius:rem(5);
-					float:left;
-				    background-size: contain;
-				}
-				.li_detail{
-					position:relative;
-					padding-top:rem(30);
-					height:rem(219);
-					width:rem(616);
-				    display: inline-block;
-					.acc{
-						color:#999;
-					}
-					.love{
-						float:right;
-						color:#999;
-						padding-right:rem(50)
-					}
-					.love::after{
-						content:"";
-						position:absolute;
-						padding-left:rem(10);
-						width:rem(26);
-						height:rem(33);
-						background:url("../../../image/icon_liked_mvdetails_mv@2x.png") no-repeat;
-						background-size: contain;
-					}
-					.dec_time{
-						color:#999;
-						font-size:rem(24);
-						padding:rem(14) 0 ;
-					}
-					.descrobe{
-						color:#333;
-						width:rem(586);
-						font-weight:bold;
-						letter-spacing:0;
-						word-break:break-all;
-						display:-webkit-box;
-						-webkit-line-clamp:3;
-						-webkit-box-orient:vertical;
-						overflow:hidden;
-					}
-				}
-			}
-		}
-
-	}
+	
 }

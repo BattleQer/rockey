@@ -1,3 +1,202 @@
-
+.content .album_singer {
+  width: 100%;
+  height: 10.048rem;
+  background-color: #5306C3;
+}
+.content .album_singer .singer_detail {
+  height: 5.12rem;
+  padding: 1.04533rem 0 0 0.21333rem;
+}
+.content .album_singer .singer_detail .singer_img {
+  width: 5.12rem;
+  height: 100%;
+  padding-right: 0.72533rem;
+  float: left;
+}
+.content .album_singer .singer_detail .singer_rec {
+  height: 100%;
+  line-height: 1.70667rem;
+  display: inline-block;
+}
+.content .album_singer .singer_detail .singer_rec .rec_title {
+  font-size: 0.68267rem;
+  color: #fff;
+}
+.content .album_singer .singer_detail .singer_rec .rec_name {
+  height: 1.28rem;
+}
+.content .album_singer .singer_detail .singer_rec .rec_name .rec_img {
+  width: 1.28rem;
+  height: 1.28rem;
+  background-position: center;
+  background: url("../../../image/weixin.png") no-repeat;
+  background-size: contain;
+  border-radius: 0.10667rem;
+  float: left;
+}
+.content .album_singer .singer_detail .singer_rec .rec_name .rec_n {
+  color: #fff;
+  font-weight: bold;
+  bottom: 0.21333rem;
+  position: relative;
+  padding-left: 0.42667rem;
+  font-size: 0.68267rem;
+}
+.content .album_singer .singer_detail .singer_rec .rec_time {
+  color: #fff;
+  opacity: 0.5;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+.content .album_singer .singer_down {
+  height: 3.88267rem;
+  width: 100%;
+}
+.content .album_singer .singer_down .bottom_p {
+  width: 3.71627rem;
+  height: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+}
+.content .album_singer .singer_down .bottom_p1 .p1_img {
+  margin-top: .5rem;
+  width: 1.19467rem;
+  height: 1.19467rem;
+  background-position: center;
+  background: url("../../../image/icon_like_comment_mv@2x.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .album_singer .singer_down .bottom_p2 .p2_img {
+  margin-top: .5rem;
+  width: 1.19467rem;
+  height: 1.19467rem;
+  background-position: center;
+  background: url("../../../image/icon_like_nearplay.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .album_singer .singer_down .bottom_p3 .p3_img {
+  margin-top: .5rem;
+  width: 1.19467rem;
+  height: 1.19467rem;
+  background-position: center;
+  background: url("../../../image/icon_download_nearplay.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .album_singer .singer_down .bottom_p4 .p4_img {
+  margin-top: .5rem;
+  width: 1.19467rem;
+  height: 1.19467rem;
+  background-position: center;
+  background: url("../../../image/icon_msn_nearplay.png") no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.content .album_song {
+  height: auto;
+  max-height: 13.61067rem;
+}
+.content .album_song .song_play {
+  width: 100%;
+  font-weight: bold;
+  height: 1.49333rem;
+  line-height: 1.17333rem;
+  padding-top: 0.384rem;
+  border-bottom: solid 0.02133rem #999;
+}
+.content .album_song .song_play .play_icon {
+  width: 1.06667rem;
+  height: 1.06667rem;
+  background: url("../../../image/icon_play_multiselect@2x.png") no-repeat;
+  background-size: contain;
+  float: left;
+}
+.content .album_song .song_play .play_count {
+  color: #999;
+}
+.content .album_song .song_play .play_all {
+  padding: 0 0.42667rem;
+}
+.content .album_song .song_more {
+  background: url("../../../image/icon_more_list_music@2x.png") no-repeat;
+  width: 1.024rem;
+  height: 1.024rem;
+  display: inline-block;
+  background-size: contain;
+}
+.content .album_song .song_list {
+  height: 2.92267rem;
+  border-bottom: 0.02133rem solid #ddd;
+}
+.content .album_song .song_list .song_index {
+  height: 100%;
+  line-height: 2.92267rem;
+  font-size: 0.72533rem;
+  color: #999;
+  font-weight: bold;
+  float: left;
+  padding-right: 0.85333rem;
+  position: relative;
+}
+.content .album_song .song_list .song_detail {
+  display: inline-block;
+  width: 12.37333rem;
+  height: auto;
+  padding-top: 0.74667rem;
+}
+.content .album_song .song_list .song_detail .song_title {
+  font-size: 0.68267rem;
+  font-weight: bold;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  display: inline-block;
+}
+.content .album_song .song_list .song_detail .song_title .specil_song {
+  font-size: 0.384rem;
+  color: #6F2EB1;
+  width: 0.85333rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.10667rem;
+  position: relative;
+  bottom: 0.10667rem;
+  border: 0.02133rem solid #6F2EB1;
+}
+.content .album_song .song_list .song_detail .song_album {
+  color: #999;
+}
+.content .album_other {
+  padding-top: 0.85333rem;
+  height: 9.6rem;
+}
+.content .album_other .title_s1 {
+  height: 0.85333rem;
+  width: 3.584rem;
+  font-weight: bold;
+  line-height: 0.85333rem;
+}
+.content .album_other .title_s2 {
+  height: 0.85333rem;
+  line-height: 0.85333rem;
+  float: right;
+  color: #999;
+  font-size: 0.512rem;
+}
+.content .album_other .album_music {
+  height: 7.68rem;
+  padding-top: 0.21333rem;
+}
+.content .album_other .album_music .other_music {
+  width: 7.68rem;
+  height: 7.68rem;
+  padding-right: 0.02133rem;
+  float: left;
+}
 
 /*# sourceMappingURL=album.css.map */
