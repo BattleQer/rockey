@@ -61,7 +61,8 @@ var config = {
             'vue': 'vue/dist/vue.js',
             'app': utils.assetsRootPath('src/js/app.js'),
             'jqueryui': utils.assetsRootPath('src/js/common/jqueryui.js'),
-            'nativeshare': utils.assetsRootPath('src/js/common/nativeShare.js')
+            'nativeshare': utils.assetsRootPath('src/js/common/nativeShare.js'),
+            // 'Swiper': utils.assetsRootPath('src/js/common/swiper.js'),
         }
     },
     module: {
@@ -133,17 +134,50 @@ var config = {
         })
     ]
 };
-var viesObj = getView('src/html/*.html', 'src/html/');
-var pages = Object.keys(viesObj);
-
-pages.forEach(function(pathname) {
+var viesObj = getView('src/html/video/*.html', 'src/html/video/');
+var musicObj = getView('src/html/music/*.html', 'src/html/music/');
+var menberObj = getView('src/html/menber/*.html', 'src/html/menber/');
+var pagesV = Object.keys(viesObj);
+var pagesM = Object.keys(musicObj);
+var pagesU = Object.keys(menberObj);
+pagesV.forEach(function(pathname) {
     var htmlName = viesObj[pathname]
     var conf = {
         filename: './html/' + htmlName + '.html', //生成的html存放路径，相对于path
-        template: './src/html/' + htmlName + '.html', //html模板路径
+        template: './src/html/video/' + htmlName + '.html', //html模板路径
         inject: 'body', //js插入的位置，true/'head'/'body'/false
         hash: true, //为静态资源生成hash值
-        chunks: ["vendor", "common", htmlName], //需要引入的chunk，不配置就会引入所有页面的资源
+        chunks: ["vendor", "common", htmlName, 'swiper'], //需要引入的chunk，不配置就会引入所有页面的资源
+        minify: { //压缩HTML文件    
+            removeComments: true, //移除HTML中的注释
+            collapseWhitespace: false //删除空白符与换行符
+        }
+    };
+    config.plugins.push(new HtmlWebpackPlugin(conf));
+})
+pagesM.forEach(function(pathname) {
+    var htmlName = musicObj[pathname]
+    var conf = {
+        filename: './html/' + htmlName + '.html', //生成的html存放路径，相对于path
+        template: './src/html/music/' + htmlName + '.html', //html模板路径
+        inject: 'body', //js插入的位置，true/'head'/'body'/false
+        hash: true, //为静态资源生成hash值
+        chunks: ["vendor", "common", htmlName, ], //需要引入的chunk，不配置就会引入所有页面的资源
+        minify: { //压缩HTML文件    
+            removeComments: true, //移除HTML中的注释
+            collapseWhitespace: false //删除空白符与换行符
+        }
+    };
+    config.plugins.push(new HtmlWebpackPlugin(conf));
+})
+pagesU.forEach(function(pathname) {
+    var htmlName = menberObj[pathname]
+    var conf = {
+        filename: './html/' + htmlName + '.html', //生成的html存放路径，相对于path
+        template: './src/html/menber/' + htmlName + '.html', //html模板路径
+        inject: 'body', //js插入的位置，true/'head'/'body'/false
+        hash: true, //为静态资源生成hash值
+        chunks: ["vendor", "common", htmlName, ], //需要引入的chunk，不配置就会引入所有页面的资源
         minify: { //压缩HTML文件    
             removeComments: true, //移除HTML中的注释
             collapseWhitespace: false //删除空白符与换行符
