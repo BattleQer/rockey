@@ -3,13 +3,20 @@ $fontSize: 46.875; // 750px 宽度
 @function rem($n) {
   @return ($n / $fontSize) * 1rem;
 }
-
-.content{
-	.mv-play{
-		height:rem(422)
+.mv-play{
+	height:rem(422);
+	max-height:rem(422);
+	.clickable{
+		height:rem(422);
+		max-height:rem(422);
+		width:rem(750);
 	}
+}
+.content{
+
 	.mv-down{
 		height:rem(383);
+		padding-top:rem(20);
 		border-bottom:rem(1) solid #dddddd;
 		.down_top{
 			border-bottom:rem(1) solid #dddddd;
@@ -52,7 +59,7 @@ $fontSize: 46.875; // 750px 宽度
 					color:#999;
 					font-size:rem(24);
 					height:rem(60);
-					width:rem(356);
+					width:rem(346);
 					display:inline-block;
 				}
 			}			

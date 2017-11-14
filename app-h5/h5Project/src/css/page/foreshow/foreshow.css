@@ -1,0 +1,109 @@
+.banner {
+  height: 8.96rem;
+  width: 16rem;
+}
+.banner .banner_logo {
+  width: 3.84rem;
+  height: 1.408rem;
+  border-radius: 0.85333rem;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: #000;
+  filter: Alpha(opacity=30);
+  text-align: center;
+  line-height: 1.408rem;
+  margin-top: 6.47381rem;
+  margin-right: 0.85333rem;
+  z-index: 999;
+  float: right;
+}
+.banner .banner_logo .banner_flag {
+  color: #fff;
+  text-align: center;
+  font-size: 0.59733rem;
+  position: relative;
+}
+
+.content .proDetail {
+  width: 100%;
+  height: 3.81013rem;
+  border-bottom: 0.04267rem solid #ddd;
+}
+.content .proDetail .pro_title {
+  padding-top: 0.42667rem;
+  width: 13.65333rem;
+  height: 0.96rem;
+  font-size: 0.68267rem;
+  letter-spacing: 0;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.content .proDetail .pro_title::after {
+  content: "";
+  position: absolute;
+  width: 0.42667rem;
+  height: 0.42667rem;
+  border-top: 1px solid #656565;
+  border-right: 1px solid #656565;
+  transform: rotate(45deg);
+  right: 0.42667rem;
+  -webkit-transform: rotate(45deg);
+}
+.content .proDetail .active {
+  padding-top: 0.42667rem;
+  font-size: 0.512rem;
+  color: #999;
+}
+.content .artist {
+  width: 100%;
+  height: 8.6912rem;
+}
+.content .artist .artist_detail {
+  padding-top: 0.85333rem;
+}
+.content .artist .artist_logo {
+  padding-top: 0.21333rem;
+  height: 4.26667rem;
+  width: 15.36rem;
+}
+.content .artist .artist_logo .artist-container {
+  width: 100%;
+  height: 100%;
+  font-size: 0.59733rem;
+  color: #999;
+}
+.content .artist .artist_logo .artist-container .swiper-slide {
+  text-align: center;
+  font-size: 0.68267rem;
+  background: #fff;
+  width: 3.2rem;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.content .liveMore {
+  height: auto;
+}
+.content .liveMore .liveTitle {
+  width: 100%;
+  height: 0.85333rem;
+  padding-bottom: 0.42667rem;
+}
+.content .liveMore .liveVideo {
+  width: 100%;
+  height: 8.66133rem;
+}
+
+/*# sourceMappingURL=foreshow.css.map */

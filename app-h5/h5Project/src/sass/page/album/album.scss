@@ -3,10 +3,8 @@ $fontSize: 46.875; // 750px 宽度
 @function rem($n) {
   @return ($n / $fontSize) * 1rem;
 }
-.content{
-	
+.page{
 	.album_singer{
-		width:100%;
 		height:rem(471);
 		background-color:#5306C3;
 		.singer_detail{
@@ -61,7 +59,7 @@ $fontSize: 46.875; // 750px 宽度
 			height:rem(182);
 			width:100%;
 			.bottom_p{
-				width:rem(174.2);
+				width:24%;
 				height:100%;
 				margin:0 auto;
 				display:inline-block;
@@ -116,110 +114,172 @@ $fontSize: 46.875; // 750px 宽度
 				}
 			}
 		}
-	}
-	.album_song{
-		height:auto;
-		max-height:rem(638);
-		.song_play{
-			width:100%;
-			font-weight:bold;
-			height:rem(70);
-			line-height:rem(55);
-			padding-top:rem(18);
-			border-bottom:solid rem(1) #999;
-			.play_icon{
-				width:rem(50);
-				height:rem(50);
-				background:url("../../../image/icon_play_multiselect@2x.png") no-repeat;
-				background-size:contain;
-				float:left;
-			}
-			.play_count{
-				color:#999;
-			}
-			.play_all{
-				padding: 0 rem(20);
-			}
-		}
-		.song_more{
-			background:url("../../../image/icon_more_list_music@2x.png") no-repeat;
-			width:rem(48);
-			height:rem(48);	
-			display:inline-block;
-			background-size:contain;
-		}
-		.song_list{
-			height:rem(137);
-			border-bottom:rem(1) solid #ddd;
-			.song_index{
-				height:100%;
-				line-height:rem(137);
-				font-size:rem(34);
-				color:#999;
+	}	
+
+	.content{
+		.album_song{
+			height:auto;
+			max-height:rem(638);
+			.song_play{
+				width:100%;
 				font-weight:bold;
-				float:left;
-				padding-right:rem(40);
-			    position: relative;
-			}
-			.song_detail{
-				display:inline-block;
-				width:rem(580);
-				height:auto;
-				padding-top:rem(35);	
-				.song_title{
-					font-size:rem(32);
-					font-weight:bold;
-					height:rem(45);
-					line-height:rem(45);
-					display:inline-block;
-					.specil_song{
-						font-size:rem(18);
-						color:#6F2EB1;
-						width:rem(40);
-						height:rem(30);
-						line-height:rem(30);
-						display:inline-block;
-						text-align:center;
-						border-radius:rem(5);
-						position:relative;
-						bottom:rem(5);
-						border:rem(1) solid #6F2EB1;
-					}
-
+				height:rem(70);
+				line-height:rem(55);
+				padding-top:rem(18);
+				border-bottom:solid rem(1) #999;
+				.play_icon{
+					width:rem(50);
+					height:rem(50);
+					background:url("../../../image/icon_play_multiselect@2x.png") no-repeat;
+					background-size:contain;
+					float:left;
 				}
-				.song_album{
+				.play_count{
 					color:#999;
-				}				
+				}
+				.play_all{
+					padding: 0 rem(20);
+				}
 			}
+			.song_more{
+				background:url("../../../image/icon_more_list_music@2x.png") no-repeat;
+				width:rem(48);
+				height:rem(48);	
+				display:inline-block;
+				background-size:contain;
+			}
+			.song_list{
+				height:rem(137);
+				border-bottom:rem(1) solid #ddd;
+				.song_index{
+					height:100%;
+					line-height:rem(137);
+					font-size:rem(34);
+					color:#999;
+					font-weight:bold;
+					float:left;
+					padding-right:rem(40);
+				    position: relative;
+				}
+				.song_detail{
+					display:inline-block;
+					width:rem(580);
+					height:auto;
+					padding-top:rem(35);	
+					.song_title{
+						font-size:rem(32);
+						font-weight:bold;
+						height:rem(45);
+						line-height:rem(45);
+						display:inline-block;
+						.specil_song{
+							font-size:rem(18);
+							color:#6F2EB1;
+							width:rem(40);
+							height:rem(30);
+							line-height:rem(30);
+							display:inline-block;
+							text-align:center;
+							border-radius:rem(5);
+							position:relative;
+							bottom:rem(5);
+							border:rem(1) solid #6F2EB1;
+						}
 
+					}
+					.song_album{
+						color:#999;
+					}				
+				}
+
+			}
 		}
-	}
-	.album_other{
-		padding-top:rem(40);
-		height:rem(450);
-		.title_s1{
-			height:rem(40);
-			width:rem(168);
-			font-weight:bold;
-			line-height:rem(40);
+		.album_other{
+			padding-top:rem(40);
+			height:rem(450);
+			.title_s1{
+				height:rem(40);
+				width:rem(168);
+				font-weight:bold;
+				line-height:rem(40);
+			}
+			.title_s2{
+				height:rem(40);
+				line-height:rem(40);
+				float:right;
+				color:#999;
+				font-size:rem(24);
+			}
+			.album_music{
+				height:rem(360);
+				padding-top:rem(10);
+				.other_music{
+				width:rem(360);
+				height:rem(360);
+				padding-right:rem(1);
+				float:left;
+			}
+			}
+			
 		}
-		.title_s2{
-			height:rem(40);
-			line-height:rem(40);
-			float:right;
-			color:#999;
-			font-size:rem(24);
-		}
-		.album_music{
-			height:rem(360);
-			padding-top:rem(10);
-			.other_music{
-			width:rem(360);
-			height:rem(360);
-			padding-right:rem(1);
-			float:left;
-		}
-		}
-		
 	}
 }
+
+#dialogBg{
+	width:100%;
+	height:100%;
+	background-color: rgba(0, 0, 0, 0.8)!important;
+    background-color: #000;
+    filter: Alpha(opacity=80);
+	position:fixed;
+	top:0;left:0;
+	z-index:9999;
+	display:none;
+	margin:0 auto;
+	#dialog{ 
+		width: rem(600); 
+		height: rem(820); 
+		margin: 0 auto; 
+		position:relative;
+		top:rem(236);
+		display: none; 
+		background-color: #ffffff; 
+		z-index: 10000; 
+		border-radius: rem(10); 
+		-webkit-border-radius: rem(10); 
+		box-shadow: 3px 2px 4px rgba(0,0,0,0.2); 
+		-webkit-box-shadow: 3px 2px 4px rgba(0,0,0,0.2); 
+		.dialogTop{
+			width:rem(600);
+			height:rem(418);
+			border-bottom:rem(1) dotted #ccc;
+			letter-spacing:1px;
+			background-color:blue;
+			.claseDialogBtn{
+				width:rem(50);
+				height:rem(50);
+				position:relative;
+				right:rem(13);
+				float:right;
+				top:rem(13);
+				background-color:#000;
+				border-radius:50%;
+				line-height:rem(40);
+				color:#fff;
+				opacity:0.6;
+				text-align:center;
+				font-size:rem(50);
+			}
+
+		}
+		.dialogCon{
+			width:rem(536);
+			height:rem(336);
+			margin:rem(20) auto;
+			font-size:rem(28);
+			overflow:hidden;
+		}
+	}
+}
+
+

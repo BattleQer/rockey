@@ -1,12 +1,20 @@
-.content .video-play {
+.video-play {
   height: 9.00267rem;
+  max-height: 9.00267rem;
 }
+.video-play .clickable {
+  height: 9.00267rem;
+  max-height: 9.00267rem;
+  width: 16rem;
+}
+
 .content .video-down {
   height: 7.31733rem;
   border-bottom: 0.02133rem solid #dddddd;
 }
 .content .video-down .down_top {
   border-bottom: 0.02133rem solid #dddddd;
+  padding-top: .5rem;
   height: 3.28533rem;
 }
 .content .video-down .down_top .singer_detail {
@@ -20,7 +28,6 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  padding-top: .5rem;
 }
 .content .video-down .down_top .singer_other {
   height: 1.28rem;
@@ -29,7 +36,7 @@
   color: #999;
   font-size: 0.512rem;
   height: 1.28rem;
-  width: 7.59467rem;
+  width: 7.38133rem;
   display: inline-block;
 }
 .content .video-down .down_bottom {
@@ -50,8 +57,9 @@
   width: 8.32rem;
 }
 .content .video-down .down_bottom .bottom_detail .btm_de_title {
-  height: 1.92rem;
+  height: 1.6rem;
   font-size: 0.68267rem;
+  line-height: .8rem;
   letter-spacing: 0;
   word-break: break-all;
   display: -webkit-box;
@@ -67,7 +75,7 @@
   border-top: 1px solid #656565;
   border-right: 1px solid #656565;
   transform: rotate(45deg);
-  top: 26%;
+  top: 5.33333rem;
   right: 0.42667rem;
   -webkit-transform: rotate(45deg);
 }
@@ -120,6 +128,63 @@
 .content .video-rec .rec_show .show_video .video_user {
   color: #999;
   height: 0.85333rem;
+}
+
+#dialogBg {
+  width: 16rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: #000;
+  filter: Alpha(opacity=80);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  margin: 0 auto;
+}
+#dialogBg #dialog {
+  width: 12.8rem;
+  height: 15.78667rem;
+  margin: 0 auto;
+  position: relative;
+  top: 5.03467rem;
+  display: none;
+  background-color: #ffffff;
+  z-index: 10000;
+  border-radius: 0.21333rem;
+  -webkit-border-radius: 0.21333rem;
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#dialogBg #dialog .dialogTop {
+  width: 12.8rem;
+  height: 7.168rem;
+  border-bottom: 0.02133rem dotted #ccc;
+  letter-spacing: 1px;
+  background-color: blue;
+}
+#dialogBg #dialog .dialogTop .claseDialogBtn {
+  width: 1.06667rem;
+  height: 1.06667rem;
+  position: relative;
+  right: 0.27733rem;
+  float: right;
+  top: 0.27733rem;
+  background-color: #000;
+  border-radius: 50%;
+  line-height: 0.85333rem;
+  color: #fff;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 1.06667rem;
+}
+#dialogBg #dialog .dialogCon {
+  width: 11.43467rem;
+  height: 7.168rem;
+  margin: 0.42667rem auto;
+  font-size: 0.59733rem;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=video.css.map */

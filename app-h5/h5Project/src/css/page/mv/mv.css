@@ -1,8 +1,16 @@
-.content .mv-play {
+.mv-play {
   height: 9.00267rem;
+  max-height: 9.00267rem;
 }
+.mv-play .clickable {
+  height: 9.00267rem;
+  max-height: 9.00267rem;
+  width: 16rem;
+}
+
 .content .mv-down {
   height: 8.17067rem;
+  padding-top: 0.42667rem;
   border-bottom: 0.02133rem solid #dddddd;
 }
 .content .mv-down .down_top {
@@ -46,7 +54,7 @@
   color: #999;
   font-size: 0.512rem;
   height: 1.28rem;
-  width: 7.59467rem;
+  width: 7.38133rem;
   display: inline-block;
 }
 .content .mv-down .down_bottom {

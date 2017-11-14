@@ -1,3 +1,52 @@
-
+.page {
+  width: 16rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+.page .column {
+  width: 100%;
+  height: 17.83467rem;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1.024rem;
+  text-align: center;
+  line-height: 1.92rem;
+  color: #fff;
+  background: url("../../../image/pic_bg_share_recharge@2x.png") no-repeat;
+  background-size: 100% 100%;
+}
+.page .column .menber_vip {
+  width: 4.736rem;
+  height: 4.736rem;
+  background: url("../../../image/pic_black_vip_share@2x.png") no-repeat;
+  border-radius: 0.10667rem;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+}
+.page .column .menber_logo {
+  margin-top: 4.69333rem;
+  width: 3.84rem;
+  height: 3.84rem;
+  background: url("../../../image/weixin.png") no-repeat;
+  border-radius: 0.10667rem;
+  background-size: contain;
+  display: inline-block;
+}
+.page .column .menber_msg {
+  font-size: 0.768rem;
+}
+.page .content {
+  padding-top: 0.42667rem;
+  height: auto;
+  width: 12.8rem;
+  min-height: 6.144rem;
+  position: relative;
+  font-size: 0.59733rem;
+  line-height: 1.024rem;
+  color: #333;
+}
 
 /*# sourceMappingURL=menber.css.map */

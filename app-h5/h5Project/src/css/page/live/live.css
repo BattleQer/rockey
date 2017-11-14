@@ -1,3 +1,222 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
+body {
+  -webkit-text-size-adjust: none;
+  font-family: sans-serif;
+}
+
+#pagenavi a.active {
+  color: red;
+}
+
+#copyright {
+  text-align: center;
+  font-size: 16px;
+  padding: 30px 0;
+}
+
+#copyright a {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.banner {
+  height: 9.00267rem;
+  width: 16rem;
+}
+.banner .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.banner .swiper-container .swiper-slide {
+  text-align: center;
+  font-size: 0.68267rem;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.live_bottom {
+  background-color: #fff;
+  width: 16rem;
+  height: 2.73067rem;
+  bottom: 0;
+  position: fixed;
+  z-index: 999;
+  border-top: 0.04267rem solid #ddd;
+}
+.live_bottom .bottom_look {
+  height: 1.87733rem;
+  width: 4.69333rem;
+  border: solid 0.02133rem #6f2eb1;
+  border-radius: 0.85333rem;
+  margin-top: 0.42667rem;
+  margin-left: 0.42667rem;
+  text-align: center;
+  float: left;
+}
+.live_bottom .bottom_look .i_cone_love {
+  width: 0.81067rem;
+  height: 0.81067rem;
+  position: relative;
+  top: 0.10667rem;
+  color: #6f2eb1;
+  display: inline-block;
+  background: url("../../../image/icon_like_trailerdetails_livebroadcast@2x.png") no-repeat;
+  background-size: contain;
+}
+.live_bottom .bottom_look .look_val {
+  color: #6f2eb1;
+  line-height: 1.87733rem;
+  font-size: 0.68267rem;
+}
+.live_bottom .bottom_buy {
+  margin-top: 0.42667rem;
+  margin-left: 0.42667rem;
+  text-align: center;
+  color: #FFF;
+  width: 10.02667rem;
+  height: 1.87733rem;
+  line-height: 1.87733rem;
+  border: 0.02133rem solid #6e2db0;
+  border-radius: 0.85333rem;
+  background-image: -o-linear-gradient(to left, #a759d8, #6e2db0);
+  background-image: -ms-linear-gradient(to left, #a759d8, #6e2db0);
+  background-image: -webkit-linear-gradient(to left, #a759d8, #6e2db0);
+  background-image: linear-gradient(to left, #a759d8, #6e2db0);
+  display: inline-block;
+  font-size: 0.68267rem;
+}
+
+.content .proDetail {
+  width: 100%;
+  height: 4.69333rem;
+  border-bottom: 0.04267rem solid #ddd;
+}
+.content .proDetail .pro_title {
+  padding-top: 0.42667rem;
+  width: 13.65333rem;
+  height: 0.96rem;
+  font-size: 0.68267rem;
+  letter-spacing: 0;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.content .proDetail .active {
+  padding-top: 0.42667rem;
+  font-size: 0.512rem;
+  color: #999;
+}
+.content .proDetail .pro_money {
+  padding-top: 0.21333rem;
+  height: 1.42933rem;
+  width: 100%;
+}
+.content .proDetail .pro_money .money_dis {
+  height: 1.42933rem;
+  padding: 0 0.21333rem;
+  font-size: 1.024rem;
+  color: #6f2eb1;
+  line-height: 1.42933rem;
+}
+.content .proDetail .pro_money .money_dis::before {
+  content: "";
+  width: 0.896rem;
+  height: 0.896rem;
+  top: 0.1rem;
+  position: relative;
+  display: inline-block;
+  background: url("../../../image/icon_wabi_purple_vip@2x.png") no-repeat;
+  background-size: contain;
+}
+.content .proDetail .pro_money .money_cost {
+  color: #999;
+  font-size: 0.512rem;
+  text-decoration: line-through;
+}
+.content .artist {
+  width: 100%;
+  height: 8.6912rem;
+}
+.content .artist .artist_detail {
+  padding-top: 0.85333rem;
+}
+.content .artist .artist_logo {
+  padding-top: 0.21333rem;
+  height: 4.26667rem;
+  width: 15.36rem;
+}
+.content .artist .artist_logo .artist-container {
+  width: 100%;
+  height: 100%;
+  font-size: 0.59733rem;
+  color: #999;
+}
+.content .artist .artist_logo .artist-container .swiper-slide {
+  text-align: center;
+  font-size: 0.68267rem;
+  background: #fff;
+  width: 3.2rem;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.content .liveMore {
+  height: 6.4rem;
+}
+.content .liveMore .liveTitle {
+  width: 100%;
+  height: 0.85333rem;
+  padding-bottom: 0.42667rem;
+}
+.content .liveMore .liveVideo {
+  width: 100%;
+  height: 5.12rem;
+}
+.content .liveOther {
+  padding: 1.49333rem 0;
+  height: 7.50933rem;
+}
+.content .liveOther .buy_know {
+  z-index: 1;
+  width: 100%;
+  height: 0.85333rem;
+  padding-bottom: 0.42667rem;
+}
+.content .liveOther .liveVideo {
+  height: 4.096rem;
+}
 
 /*# sourceMappingURL=live.css.map */

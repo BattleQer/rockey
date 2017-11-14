@@ -1,0 +1,42 @@
+$fontSize: 46.875; // 750px 宽度
+// 计算宽度
+@function rem($n) {
+  @return ($n / $fontSize) * 1rem;
+}
+body{
+	background-color:#979797;
+	height:auto;
+	overflow:hidden;
+}
+.page{
+	.content{
+		height:rem(1332);
+		width:rem(750);
+		margin:0 auto;
+		padding:0;
+		.main{
+			width:100%;
+			height:auto;
+			.live_player{
+				width:100%;
+				height:rem(420);
+				position:relative;
+			}
+			.live_comment{
+				margin:0 auto;
+				width:rem(722);
+				height:rem(660);
+			    overflow-y: scroll;
+    			overflow-x: hidden; 
+			}
+		}
+		.footer{
+			position:absolute;
+			bottom:0;
+			padding:0;
+			height:rem(100);
+			width:100%;
+		}
+	}	
+}
+

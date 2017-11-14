@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+    <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+<div class="page">
+	<!--专辑歌手 -->
+	<div class="album_singer">
+		<a href="javascript:;" class="bounceIn">
+			<div class="singer_detail bounceIn">
+				<div class="singer_img">
+				</div>
+				<div class="singer_rec">
+					<div class="rec_title"> To My Love 影音馆 </div>
+					<div class="rec_name">
+						<span class="rec_img"></span>
+						<span class="rec_n"> 周杰伦 </span>
+					</div>
+					<div class="rec_time"> 2016.07.13 发行</div>
+				</div>
+			</div>
+		</a>
+		<div class="singer_down">
+			<div class="bottom_p bottom_p1">								
+				<div class="p1_img">
+				</div>
+				<div>
+					点赞
+				</div>								
+			</div>
+			<div class="bottom_p bottom_p2">								
+				<div class="p2_img">
+				</div>
+				<div>
+					收藏
+				</div>				
+			</div>
+			<div class="bottom_p bottom_p3">					
+
+				<div class="p3_img">
+				</div>
+				<div>
+					下载
+				</div>
+
+			</div>
+			<div class="bottom_p bottom_p4">					
+				<div class="p4_img">
+				</div>
+				<div>
+					评论
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content" id='content' style="">
+
+
+		<!--ר专辑歌曲 -->
+		<div class="album_song">
+			<div class="song_play">
+				<i class="play_icon"></i>
+				<span class="play_all">全部部分</span>
+				<span class="play_count">12首</span>
+			</div>
+			<div class="song_list" v-for="(item,index) in albumList" v-if="index < 4">
+				<div class="song_index">{{ index+1 }}</div>
+				<div class="song_detail">
+					<div class="song_title">
+						<span> {{item.name}}</span>
+						<span class="specil_song" v-if="item.type1">独家</span>
+						<span class="specil_song" v-if="item.type2"> M V </span>
+					</div>
+					<div class="song_album">
+						{{item.album}}
+					</div>
+				</div>
+				<div class="song_more"></div>	
+			</div>
+
+		</div>
+		<!--ר其他专辑 -->
+		<div class="album_other">
+			<div class="other_title">
+				<span class="title_s1">其他专辑推荐</span>
+				<span class="title_s2">更动听 > </span>
+			</div>
+			<div class="album_music">
+				<div class="other_music" v-for = "item in mvList">
+				
+				</div>		
+			</div>
+			
+		</div>
+		
+	 <!-- 评论 -->
+		<div class="mv-com">
+			<div class="com_title">
+				最新评论
+			</div>
+			<div class="com_list">
+				<li class="com_list_li" v-for="(item,index) in com_list" v-if="index < 5">
+					<div class="li_img"></div>
+					<div class="li_detail">
+						<span class="acc">{{item.acc}}</span>
+						<span class="love">{{item.love}}</span>
+						<div class="dec_time">{{item.time}}</div>
+						<div class="descrobe">{{item.descrobe}}</div>
+
+					</div>
+				</li>
+			</div>
+		</div>
+	</div>
+		
+	<div id="dialogBg">
+	<div id="dialog" class="animated">
+		<div class="dialog_main">
+			<div class="dialogTop">
+				<a href="javascript:;" class="claseDialogBtn">×</a>
+			</div>
+			<div class="dialogCon">
+				沙地后期我我我去哦我就很费横扫我加法我奇迹后期我IQ我IQ无IQ今天还局TV业务，么把同文件太不稳提供，问，图给我和沟通和我哥特我跟她维护跟他闹翁田，没问沟通问题话跟我，儿童歌舞没提供，文描图给我，的特务跳个舞，没提供，问问他个窝，没太好改，了我跟她，而我钢铁网，没图给我，个；
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+			
+
+</body>
+
+
+</html>

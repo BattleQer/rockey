@@ -1,0 +1,56 @@
+$fontSize: 46.875; // 750px 宽度
+// 计算宽度
+@function rem($n) {
+  @return ($n / $fontSize) * 1rem;
+}
+
+.page{
+	width:rem(750);
+	height:auto;
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	.column{
+		width:100%;
+		height:rem(836);
+		margin:0 auto;
+		position:relative;
+		font-size:rem(48);
+		text-align:center;
+		line-height:rem(90);
+		color:#fff;
+	    background: url("../../../image/pic_bg_share_recharge@2x.png") no-repeat;
+	    background-size:100% 100%;
+		.menber_vip{
+			width:rem(222);
+			height:rem(222);
+		    background: url("../../../image/pic_black_vip_share@2x.png") no-repeat;
+		    border-radius: 0.10667rem;
+		    background-size: contain;
+		    position:absolute;
+		    right:0;
+		}
+		.menber_logo{
+			margin-top:rem(220);
+			width:rem(180);
+			height:rem(180);
+		    background: url("../../../image/weixin.png") no-repeat;
+		    border-radius: 0.10667rem;
+		    background-size: contain;
+		    display:inline-block;
+		}
+		.menber_msg{
+			font-size:rem(36)
+		}
+	}
+	.content{
+		padding-top:rem(20);
+		height:auto;
+		width:rem(600);
+		min-height:rem(288);
+		position:relative;
+		font-size:rem(28);
+		line-height:rem(48);
+		color:#333;
+	}
+}
