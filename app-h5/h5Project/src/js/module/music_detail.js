@@ -1,6 +1,10 @@
 require("../../css/page/music/music.css");
 const mp3 = require("../../song/2.mp3");
-
+require("../../css/common/swiper/swiper-3.4.2.min.css");
+var swiper = new Swiper('.mainBody .swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true
+});
 /*显示歌词部分*/
 var scrollt = 0;
 var tflag = 0; //存放时间和歌词的数组的下标
@@ -29,8 +33,8 @@ $(window).on('load', function() {
     audio.addEventListener('ended', audioEnded, false);
     getReady(sid); //准备播放
     mPlay(); //显示歌词
-    window.setInterval(scrollBar, delay);
-    window.setInterval(mPlay, 100);
+    // window.setInterval(scrollBar, delay);
+    // window.setInterval(mPlay, 100);
 });
 $(function() {
     // /*底部进度条控制*/

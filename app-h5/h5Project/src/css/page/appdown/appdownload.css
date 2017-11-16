@@ -1,0 +1,60 @@
+.page {
+  width: 16rem;
+  height: 28.416rem;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+.page .content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url("../../../image/app_down.png") no-repeat;
+  background-size: 100% 100%;
+}
+.page .content .app_down_box {
+  width: 14.08rem;
+  height: 5.01333rem;
+  margin: 0 auto;
+  position: relative;
+  top: 8.53333rem;
+  background: url("../../../image/app_down_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.page .content .app_down_box .app_down_eng {
+  top: 2.13333rem;
+  position: relative;
+  height: 3.392rem;
+  width: 12.30933rem;
+  margin: 0 auto;
+  background: url("../../../image/app_down_eng.png") no-repeat;
+  background-size: 100% 100%;
+}
+.page .content .app_down_name {
+  position: relative;
+  height: 2.85867rem;
+  width: 9.04533rem;
+  top: 14.93333rem;
+  margin: 0 auto;
+  background: url("../../../image/app_down_con.png") no-repeat;
+  background-size: 100% 100%;
+}
+.page .content .app_down_btn {
+  height: 1.792rem;
+  width: 9.30133rem;
+  margin: 0 auto;
+  background: url("../../../image/app_down_btn.png") no-repeat;
+  background-size: 100% 100%;
+  bottom: 1.62133rem;
+  top: 17.06667rem;
+  position: relative;
+  z-index: 199;
+  font-size: 0.64rem;
+  color: #B74B4F;
+  letter-spacing: 0.11989rem;
+  text-align: center;
+  line-height: 1.792rem;
+  font-family: SourceHanSansCN-Medium;
+}
+
+/*# sourceMappingURL=appdownload.css.map */

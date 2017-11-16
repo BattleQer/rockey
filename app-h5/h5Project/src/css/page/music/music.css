@@ -93,7 +93,6 @@ a {
   position: relative;
   width: 16rem;
   height: 3.8rem;
-  margin: auto;
 }
 
 .playerDown {
@@ -102,6 +101,22 @@ a {
   height: 2.8rem;
   margin: auto;
 }
+.playerDown .downApp {
+  width: 12.48rem;
+  height: 1.728rem;
+  margin: 0 auto;
+  background-image: -o-linear-gradient(to right, #a356d6, #702fb2);
+  background-image: -ms-linear-gradient(to right, #a356d6, #702fb2);
+  background-image: -webkit-linear-gradient(to right, #a356d6, #702fb2);
+  background-image: linear-gradient(to right, #a356d6, #702fb2);
+  border-radius: 1.06667rem;
+  font-size: 0.68267rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.728rem;
+  position: relative;
+  top: 1rem;
+}
 
 .prevdown1 {
   background: url("../../../image/icon_musicplay_order.png") 100% 100% no-repeat;
@@ -109,22 +124,6 @@ a {
 
 .prevdown2 {
   background: url("../../../image/icon_musicplay_nearplay.png") 100% 100% no-repeat;
-}
-
-.prevdown3 {
-  background: url("../../../image/icon_like_nearplay.png") 100% 100% no-repeat;
-}
-
-.prevdown4 {
-  background: url("../../../image/icon_download_nearplay.png") 100% 100% no-repeat;
-}
-
-.prevdown5 {
-  background: url("../../../image/icon_msn_nearplay.png") 100% 100% no-repeat;
-}
-
-.prevdown6 {
-  background: url("../../../image/icon_share_nearplay.png") 100% 100% no-repeat;
 }
 
 .pbtn {
@@ -143,13 +142,17 @@ a {
 .playBtn {
   width: 3.5rem;
   height: 3.5rem;
+  top: .3rem;
+  position: relative;
   background: url("../../../image/icon_bofang_music@2x.png") 100% 100% no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 .playBtn {
   width: 3.5rem;
   height: 3.5rem;
+  top: .3rem;
+  position: relative;
   background: url("../../../image/icon_stop_music.png") 100% 100% no-repeat;
   background-position: center;
 }
@@ -520,8 +523,64 @@ a {
 .mainBody {
   height: 100%;
 }
+.mainBody .mainType {
+  padding-top: 1.70667rem;
+  padding-bottom: 1.06667rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.mainBody .mainType span {
+  width: 2.34667rem;
+  height: 0.85333rem;
+  text-align: center;
+  border: 0.04267rem #333 solid;
+  border-radius: 0.08533rem;
+  font-size: 0.512rem;
+  display: inline-block;
+  line-height: 0.85333rem;
+  margin-right: 0.42667rem;
+}
+.mainBody .mainImg {
+  width: 11.52rem;
+  height: 11.52rem;
+  margin: 0 auto;
+  background: url("../../../image/weixin.png") no-repeat;
+  background-size: contain;
+}
+.mainBody .mainDel {
+  width: 100%;
+  padding-top: 0.64rem;
+}
+.mainBody .mainDel div {
+  color: #999;
+  font-size: 0.512rem;
+  height: 0.704rem;
+  line-height: 0.704rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.mainBody .mainDel .mainDel_f {
+  width: 7.57333rem;
+}
+.mainBody .mainDel .mainDel_s {
+  width: 11.73333rem;
+}
+.mainBody .swiper-pagination-bullets {
+  width: 100%;
+  bottom: -0.85333rem;
+}
+.mainBody .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-right: 0.32rem;
+  opacity: 1;
+  width: 0.32rem;
+  height: 0.32rem;
+  background-color: #ddd;
+}
+.mainBody .swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #999;
+}
 
-.mainOuther {
+.mainOther {
   position: relative;
   margin: 0 auto;
   top: 0;

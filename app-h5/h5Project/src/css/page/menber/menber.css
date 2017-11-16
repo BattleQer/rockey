@@ -48,5 +48,25 @@
   line-height: 1.024rem;
   color: #333;
 }
+.page .footer_backup {
+  width: 16rem;
+  height: 2.26133rem;
+}
+.page .footer_down {
+  width: 16rem;
+  height: 2.26133rem;
+  background: url("../../../image/download2.png") no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  text-align: center;
+}
+.page .footer_down span {
+  font-size: 0.768rem;
+  color: #fff;
+  line-height: 2.26133rem;
+  padding-right: 0.42667rem;
+}
 
 /*# sourceMappingURL=menber.css.map */

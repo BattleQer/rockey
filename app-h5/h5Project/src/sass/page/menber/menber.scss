@@ -53,4 +53,24 @@ $fontSize: 46.875; // 750px 宽度
 		line-height:rem(48);
 		color:#333;
 	}
+	.footer_backup{
+		width:rem(750);
+		height:rem(106);
+	}
+	.footer_down{
+		width:rem(750);
+		height:rem(106);
+		background:url("../../../image/download2.png") no-repeat;
+		background-size:100% 100%;
+		position:fixed;
+		z-index:9999;
+		bottom:0;
+		text-align:center;
+		span{
+			font-size:rem(36);
+			color:#fff;
+			line-height:rem(106);
+			padding-right:rem(20);
+		}
+	}
 }

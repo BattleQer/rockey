@@ -1,0 +1,64 @@
+$fontSize: 46.875; // 750px 宽度
+// 计算宽度
+@function rem($n) {
+  @return ($n / $fontSize) * 1rem;
+}
+
+.page{
+	width:rem(750);
+	height:rem(1332);
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	.content{
+		height:100%;
+		width:100%;
+		position:relative;
+		background:url("../../../image/app_down.png") no-repeat;
+		background-size:100% 100%;
+		.app_down_box{
+			width:rem(660);
+			height:rem(235);
+			margin:0 auto;
+			position:relative;
+			top:rem(400);
+			background:url("../../../image/app_down_bg.png") no-repeat;
+			background-size:100% 100%;
+			.app_down_eng{
+				top:rem(100);
+				position:relative;
+				height:rem(159);
+				width:rem(577);
+				margin:0 auto;
+				background:url("../../../image/app_down_eng.png") no-repeat;
+				background-size:100% 100%;
+			}
+		}
+		.app_down_name{
+			position:relative;
+			height:rem(134);
+			width:rem(424);
+			top:rem(700);
+			margin:0 auto;
+			background:url("../../../image/app_down_con.png") no-repeat;
+			background-size:100% 100%;
+		}
+		.app_down_btn{
+			height:rem(84);
+			width:rem(436);
+			margin:0 auto;
+			background:url("../../../image/app_down_btn.png") no-repeat;
+			background-size:100% 100%;
+			bottom:rem(76);
+			top:rem(800);
+			position:relative;
+			z-index:199;
+			font-size: rem(30);
+			color: #B74B4F;
+			letter-spacing: rem(5.62);
+			text-align:center;
+			line-height:rem(84);
+			font-family: SourceHanSansCN-Medium;
+		}
+	}
+}

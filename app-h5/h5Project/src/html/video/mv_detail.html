@@ -16,6 +16,7 @@
 	<script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/gh/clappr/clappr@latest/dist/clappr.min.js"> </script>
 </head>
 <body>
+<div class="page">
      <!-- MV -->
 	<div class="mv-play">
 		<div class="player" id="player"></div>
@@ -73,7 +74,7 @@
        <div class="mv-rec">
 			<div class="rec_title">
                 <span class="rec_mv">推荐MV</span>
-				<span class="rec_more">更精彩 > </span>
+
             </div>
 			<div class="rec_show" > 
 				<div class="show_mv" v-for = "item in mvList">
@@ -102,8 +103,17 @@
                 </li>
             </div>
         </div>
-
-    </div>
+	</div>	
+	<div class="download_backup"></div>
+	<div class="download_bottom">
+		<a class="down_close">
+		
+		</a>
+		<a class="down_btm">
+			
+		</a>
+	</div>
+</div>	
 </body>
 
 </html>
