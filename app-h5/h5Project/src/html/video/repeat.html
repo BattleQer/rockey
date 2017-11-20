@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
 <head>
-    <title>demo</title>    
+    <title>回放</title>
     <meta name="description" content="demo" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,104 +11,105 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no,email=no,address=no" />
     <meta name="ML-Config" content="fullscreen=yes,preventMove=no" />
-    <title>Title</title>
-	<script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/gh/clappr/clappr@latest/dist/clappr.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/gh/clappr/clappr@latest/dist/clappr.min.js">
+    </script>
 
 
 </head>
+
 <body>
-<div class="page">
-<!-- video -->
+    <div class="page">
+        <!-- video -->
         <div class="video-play">
-			<div class="player" id="player"></div>
+            <div class="player" id="player"></div>
         </div>
-    <div class="content" id="content">
-        
-        <!-- 下载栏 -->
-        <div class="video-down">
-			<div class="down_top flipInX">
-                <div class="singer_detail">
-                    这是一个华丽丽的video标题，当然可能会超过一行啦，但系如果超过两行就会这样子的了，哈哈哈哈哈
+        <div class="content" id="content">
+
+            <!-- 下载栏 -->
+            <div class="video-down">
+                <div class="down_top flipInX">
+                    <div class="singer_detail">
+                        这是一个华丽丽的video标题，当然可能会超过一行啦，但系如果超过两行就会这样子的了，哈哈哈哈哈
+                    </div>
+                    <div class="singer_other">
+                        <span>2017-09-07</span>
+                        <span>93.7万播放次数</span>
+                    </div>
                 </div>
-                <div class="singer_other">
-                    <span>2017-09-07</span>
-                    <span>93.7万播放次数</span>
-                </div>
-            </div>
-            <div class="down_bottom">
-				<div class="bottom_video">
-				
-				</div>
-				<div class="bottom_detail">
-					<div class="btm_de_title">
-						奔跑吧，兄弟，这是一个华丽丽的标题，华丽丽的节目名称并且不会超过两行
-					</div>
-					<div class="btm_de_rec">
-						更新至第八期/总共24期
-					</div>
-				</div>
-            </div>
-        </div>
-        <!-- 推荐 -->
-       <div class="video-rec">
-			<div class="rec_title">
-                <span class="rec_video">精彩视频</span>
-				<span class="rec_more">更精彩 > </span>
-            </div>
-			<div class="rec_show" > 
-				<div class="show_video" v-for = "item in mvList">
-					<div class="video"></div>
-					<div class="video_title"> {{item.title}}</div>
-					<div class="video_user"> {{item.user}}</div>
-				</div>
-				
-			</div>
-        </div> 
-        <!-- 评论区 -->
-        <div class="mv-com">
-            <div class="com_title">
-                最新评论
-            </div>
-            <div class="com_list">
-                <li class="com_list_li" v-for="item in com_list">
-                    <div class="li_img"></div>
-                    <div class="li_detail">
-                        <span class="acc">{{item.acc}}</span>
-                        <span class="love">{{item.love}}</span>
-                        <div class="dec_time">{{item.time}}</div>
-                        <div class="descrobe">{{item.descrobe}}</div>
+                <div class="down_bottom">
+                    <div class="bottom_video">
 
                     </div>
-                </li>
+                    <div class="bottom_detail">
+                        <div class="btm_de_title">
+                            奔跑吧，兄弟，这是一个华丽丽的标题，华丽丽的节目名称并且不会超过两行
+                        </div>
+                        <div class="btm_de_rec">
+                            更新至第八期/总共24期
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 推荐 -->
+            <div class="video-rec">
+                <div class="rec_title">
+                    <span class="rec_video">精彩视频</span>
+                    <span class="rec_more">更精彩 > </span>
+                </div>
+                <div class="rec_show">
+                    <div class="show_video" v-for="item in mvList">
+                        <div class="video"></div>
+                        <div class="video_title"> {{item.title}}</div>
+                        <div class="video_user"> {{item.user}}</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 评论区 -->
+            <div class="mv-com">
+                <div class="com_title">
+                    最新评论
+                </div>
+                <div class="com_list">
+                    <li class="com_list_li" v-for="item in com_list">
+                        <div class="li_img"></div>
+                        <div class="li_detail">
+                            <span class="acc">{{item.acc}}</span>
+                            <span class="love">{{item.love}}</span>
+                            <div class="dec_time">{{item.time}}</div>
+                            <div class="descrobe">{{item.descrobe}}</div>
+
+                        </div>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+        <div class="download_backup"></div>
+        <div class="download_bottom">
+            <a class="down_close">
+
+            </a>
+            <a class="down_btm">
+
+            </a>
+        </div>
+        <div id="dialogBg">
+            <div id="dialog" class="animated">
+                <div class="dialog_main">
+                    <div class="dialogTop">
+                        <a href="javascript:;" class="claseDialogBtn">×</a>
+                    </div>
+                    <div class="dialogCon">
+                        沙地后期我我我去哦我就很费横扫我加法我奇迹后期我IQ我IQ无IQ今天还局TV业务，么把同文件太不稳提供，问，图给我和沟通和我哥特我跟她维护跟他闹翁田，没问沟通问题话跟我，儿童歌舞没提供，文描图给我，的特务跳个舞，没提供，问问他个窝，没太好改，了我跟她，而我钢铁网，没图给我，个；
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-	<div class="download_backup"></div>
-	<div class="download_bottom">
-		<a class="down_close">
-		
-		</a>
-		<a class="down_btm">
-			
-		</a>
-	</div>
-	<div id="dialogBg">
-	<div id="dialog" class="animated">
-		<div class="dialog_main">
-			<div class="dialogTop">
-				<a href="javascript:;" class="claseDialogBtn">×</a>
-			</div>
-			<div class="dialogCon">
-				沙地后期我我我去哦我就很费横扫我加法我奇迹后期我IQ我IQ无IQ今天还局TV业务，么把同文件太不稳提供，问，图给我和沟通和我哥特我跟她维护跟他闹翁田，没问沟通问题话跟我，儿童歌舞没提供，文描图给我，的特务跳个舞，没提供，问问他个窝，没太好改，了我跟她，而我钢铁网，没图给我，个；
-			</div>
-		</div>
-	</div>
-	</div>
-</div>	
 </body>
 
- <script>
+<script>
+</script>
 
-  </script>
 </html>

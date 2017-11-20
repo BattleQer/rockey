@@ -194,7 +194,7 @@ var app = new vue({
                         return resp; // 直接返回要处理的数据，作为默认参数传入之后done()方法的回调
                     } else {
                         return $.Deferred().reject(resp.msg); // 返回一个失败状态的deferred对象，把错误代码作为默认参数传入之后fail()方法的回调
-                    }
+                    }e
                 }, function(err) {
                     // 失败回调 不作逻辑处理
                     console.log(err.status); // 打印状态码
@@ -225,7 +225,8 @@ window.onresize = function() {
     getSrceenWH();
 }
 $(window).resize();
-
+`   `
+-
 $(function() {
     getSrceenWH();
     //关闭弹窗

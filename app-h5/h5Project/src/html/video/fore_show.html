@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
 <head>
-    <title>demo</title>
+    <title>视频详情</title>
     <meta charset="UTF-8">
     <meta name="description" content="demo" />
     <meta name="apple-touch-fullscreen" content="yes" />
@@ -12,83 +12,83 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no,email=no,address=no" />
     <meta name="ML-Config" content="fullscreen=yes,preventMove=no" />
-    <title>Title</title>
 
 </head>
-<body>
-<div class="page">
-    <!-- 直播栏目图 -->
-	<div class="banner">
-		<div class="banner_logo">
-			<span class="banner_flag"> √ 已追踪 </span>
-		</div>
-	</div>
-    <div class="content" id="content">
-		<div class="proDetail">
-			<div class="pro_title"> 
-				国庆中秋佳节人月两团圆特别节目：男神女神is哈都我和扫地沙地哦哈
-			</div>
-			<div class="active">
-				18个活动
-			</div>
-		
-		</div>
-		<div class="artist">
-			<div class="artist_detail">演出艺人</div>
-			<div class="artist_logo">
-				<div class="swiper-container artist-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">Slide 1</div>
-						<div class="swiper-slide">Slide 2</div>
-						<div class="swiper-slide">Slide 3</div>
-						<div class="swiper-slide">Slide 4</div>
-						<div class="swiper-slide">Slide 5</div>
-						<div class="swiper-slide">Slide 6</div>
-						<div class="swiper-slide">Slide 7</div>
-						<div class="swiper-slide">Slide 8</div>
-						<div class="swiper-slide">Slide 9</div>
-						<div class="swiper-slide">Slide 10</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="liveMore">
-			<div class="liveTitle">
-				精彩直播
-			</div>
-			<div class="liveVideo">
-			
-			</div>
-		</div>
-		        <!-- 评论区 -->
-        <div class="mv-com">
-            <div class="com_title">
-                最新评论
-            </div>
-            <div class="com_list">
-                <li class="com_list_li" v-for="item in com_list">
-                    <div class="li_img"></div>
-                    <div class="li_detail">
-                        <span class="acc">{{item.acc}}</span>
-                        <span class="love">{{item.love}}</span>
-                        <div class="dec_time">{{item.time}}</div>
-                        <div class="descrobe">{{item.descrobe}}</div>
 
-                    </div>
-                </li>
+<body>
+    <div class="page">
+        <!-- 直播栏目图 -->
+        <div class="banner">
+            <div class="banner_logo">
+                <span class="banner_flag"> √ 已追踪 </span>
             </div>
         </div>
+        <div class="content" id="content">
+            <div class="proDetail">
+                <div class="pro_title">
+                    国庆中秋佳节人月两团圆特别节目：男神女神is哈都我和扫地沙地哦哈
+                </div>
+                <div class="active">
+                    18个活动
+                </div>
+
+            </div>
+            <div class="artist">
+                <div class="artist_detail">演出艺人</div>
+                <div class="artist_logo">
+                    <div class="swiper-container artist-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                            <div class="swiper-slide">Slide 6</div>
+                            <div class="swiper-slide">Slide 7</div>
+                            <div class="swiper-slide">Slide 8</div>
+                            <div class="swiper-slide">Slide 9</div>
+                            <div class="swiper-slide">Slide 10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="liveMore">
+                <div class="liveTitle">
+                    精彩直播
+                </div>
+                <div class="liveVideo">
+
+                </div>
+            </div>
+            <!-- 评论区 -->
+            <div class="mv-com">
+                <div class="com_title">
+                    最新评论
+                </div>
+                <div class="com_list">
+                    <li class="com_list_li" v-for="item in com_list">
+                        <div class="li_img"></div>
+                        <div class="li_detail">
+                            <span class="acc">{{item.acc}}</span>
+                            <span class="love">{{item.love}}</span>
+                            <div class="dec_time">{{item.time}}</div>
+                            <div class="descrobe">{{item.descrobe}}</div>
+
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="download_backup"></div>
+        <div class="download_bottom">
+            <a class="down_close">
+
+            </a>
+            <a class="down_btm">
+
+            </a>
+        </div>
     </div>
-	<div class="download_backup"></div>
-	<div class="download_bottom">
-		<a class="down_close">
-		
-		</a>
-		<a class="down_btm">
-			
-		</a>
-	</div>
-</div>	
 </body>
 
 </html>
