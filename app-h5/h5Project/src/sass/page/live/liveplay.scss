@@ -1,76 +1,81 @@
 $fontSize: 46.875; // 750px 宽度
 // 计算宽度
 @function rem($n) {
-  @return ($n / $fontSize) * 1rem;
-}
-html,body{
-	background-color:#222;
-	height:auto;
-	overflow:hidden;
-}
-.page{
-	.content{
-		height:rem(1332);
-		width:rem(750);
-		margin:0 auto;
-		padding:0;
-		.main{
-			width:100%;
-			height:auto;
-			.live_player{
-				width:100%;
-				height:rem(420);
-				position:relative;
-			}
-			.live_comment{
-				margin:0 auto;
-				padding-top:rem(30);
-				width:rem(722);
-				height:rem(674);
-			    overflow-y: scroll;
-    			overflow-x: hidden;
-    			.comment_list{
-    				width:100%;
-    				height:100%;
-    				margin:0 auto;
-    				font-size:rem(28);
-    				line-height:rem(40);
-    				.comment_del{
-						  color: #fff;
-						  letter-spacing: 0;
-						  word-break: break-all;
-						  display: -webkit-box;
-						  -webkit-line-clamp: 2;
-						  -webkit-box-orient: vertical;
-						  overflow: hidden;
-						  .comment_id{
-						  	color:#fc7c79;
-						  	padding-right:rem(10);
-						  }
-    				}
-    			} 
-			}
-		}
-		.footer_backup{
-			width:rem(750);
-			height:rem(106);
-		}
-		.footer_down{
-			width:rem(750);
-			height:rem(106);
-			background:url("../../../image/download2.png") no-repeat;
-			background-size:100% 100%;
-			position:fixed;
-			z-index:9999;
-			bottom:0;
-			text-align:center;
-			span{
-				font-size:rem(36);
-				color:#fff;
-				line-height:rem(106);
-				padding-right:rem(20);
-			}
-		}
-	}	
+    @return ($n / $fontSize) * 1rem;
 }
 
+html,
+body {
+    background-color: #222;
+    height: auto;
+    overflow: hidden;
+}
+
+.page {
+    .content {
+        height: rem(1332);
+        width: rem(750);
+        margin: 0 auto;
+        padding: 0;
+        .main {
+            width: 100%;
+            height: auto;
+            .live_player {
+                width: 100%;
+                height: rem(420);
+                position: relative;
+            }
+            .live_comment {
+                margin: 0 auto;
+                padding-top: rem(30);
+                width: rem(722);
+                height: rem(674);
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .comment_list {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    font-size: rem(28);
+                    line-height: rem(40);
+                    .comment_del {
+                        color: #fff;
+                        letter-spacing: 0;
+                        word-break: break-all;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        .comment_id {
+                            color: #fc7c79;
+                            padding-right: rem(10);
+                        }
+                    }
+                }
+            }
+        }
+        .footer_backup {
+            width: rem(750);
+            height: rem(106);
+        }
+        .footer_down {
+            width: rem(750);
+            height: rem(106);
+            background: url("../../../image/download2.png") no-repeat;
+            background-size: 100% 100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            position: fixed;
+            z-index: 9999;
+            bottom: 0;
+            text-align: center;
+            span {
+                font-size: rem(36);
+                color: #fff;
+                line-height: rem(106);
+                padding-right: rem(20);
+            }
+        }
+    }
+}

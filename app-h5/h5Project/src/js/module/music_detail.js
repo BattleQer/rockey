@@ -33,8 +33,8 @@ $(window).on('load', function() {
     audio.addEventListener('ended', audioEnded, false);
     getReady(sid); //准备播放
     mPlay(); //显示歌词
-    // window.setInterval(scrollBar, delay);
-    // window.setInterval(mPlay, 100);
+    window.setInterval(scrollBar, delay);
+    window.setInterval(mPlay, 100);
 });
 $(function() {
     // /*底部进度条控制*/
@@ -109,6 +109,7 @@ function updateProgress(ev) {
 function audioPlay(ev) {
     $(".iplay").css("background-image", 'url("/./image/icon_bofang_music@2x.8ccabcf.png")');
     $(".playBtn").attr("isplay", "1");
+    $(".playBtn").css("background-image", 'url("/./image/icon_stop_music.7fba784.png');
 }
 
 function audioPause(ev) {
@@ -150,7 +151,7 @@ function show(t) //显示歌词
     {
         for (var k = 0; k < lytext.length; k++) {
             if (lytime[k] <= t && t < lytime[k + 1]) {
-                scrollh = k * 70; //让当前的滚动条的顶部改变一行的高度 
+                scrollh = k * 80; //让当前的滚动条的顶部改变一行的高度 
                 div1.innerHTML += "<font color=#6f2eb1 style=font-weight:bold>" + lytext[k] + "</font><br>";
             } else if (t < lytime[lytime.length - 1]) //数组的最后一个要舍弃
                 div1.innerHTML += lytext[k] + "<br>";

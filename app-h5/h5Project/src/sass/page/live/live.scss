@@ -1,8 +1,9 @@
 $fontSize: 46.875; // 750px 宽度
 // 计算宽度
 @function rem($n) {
-  @return ($n / $fontSize) * 1rem;
+    @return ($n / $fontSize) * 1rem;
 }
+
 // .swipe li div, .swipe div div div {
 //   padding:rem(50) rem(10);
 //   background:#1db1ff;
@@ -11,222 +12,275 @@ $fontSize: 46.875; // 750px 宽度
 //   font-size:rem(20);
 //   text-align:center;
 // }
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
+
 body {
-  -webkit-text-size-adjust:none;
-  font-family:sans-serif;
+    -webkit-text-size-adjust: none;
+    font-family: sans-serif;
 }
-#pagenavi a.active{
-	color:red;
+
+#pagenavi a.active {
+    color: red;
 }
-#copyright{
-	text-align:center;
-	font-size:16px;
-	padding:30px 0;
+
+#copyright {
+    text-align: center;
+    font-size: 16px;
+    padding: 30px 0;
 }
-#copyright a{
-	font-weight:bold;
-	font-size:16px;
+
+#copyright a {
+    font-weight: bold;
+    font-size: 16px;
 }
-.banner{
-	height:rem(422);
-	width:rem(750);
+
+.banner {
+    height: rem(422);
+    width: rem(750);
+    margin: 0 auto;
     .swiper-container {
         width: 100%;
         height: 100%;
-    .swiper-slide {
-        text-align: center;
-        font-size:rem(32);
-        background: #fff;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    	}
+        .swiper-slide {
+            text-align: center;
+            font-size: rem(32);
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
     }
 }
-.live_bottom{
-	background-color: #fff;
-	width:rem(750);
-	height:rem(128);
-	bottom:0;
-	position:fixed;
-	z-index:999;
-	border-top:rem(2) solid #ddd;
-	.bottom_look{
-		height:rem(88);
-		width:rem(220);
-		border:solid rem(1) #6f2eb1;
-		border-radius:rem(40);
-		margin-top:rem(20);
-		margin-left:rem(20);
-		text-align:center;
-		float:left;
-		.i_cone_love{
-			width:rem(38);
-			height:rem(38);
-			position: relative;
-			top:rem(5);
-			color:#6f2eb1;
-		    display: inline-block;
-			background:url('../../../image/icon_like_trailerdetails_livebroadcast@2x.png') no-repeat;
-			background-size:contain;
-		}
-		.look_val{
-			color:#6f2eb1;
-			line-height:rem(88);
-			font-size:rem(32);
-		}
-	}
-	.bottom_buy{
-		margin-top:rem(20);
-		margin-left:rem(20);
-		text-align:center;
-		color:#FFF;
-		width:rem(470);
-		height:rem(88);
-		line-height:rem(88);
-		border:rem(1) solid #6e2db0;
-		border-radius:rem(40);
-		background-image:-o-linear-gradient(to left, #a759d8, #6e2db0);
-		background-image:-ms-linear-gradient(to left, #a759d8, #6e2db0);  
-		background-image:-webkit-linear-gradient(to left, #a759d8, #6e2db0); 
-		background-image:linear-gradient(to left, #a759d8, #6e2db0);
-		display:inline-block;
-		font-size:rem(32);
-	}
 
+.live_bottom {
+    background-color: #fff;
+    width: rem(750);
+    height: rem(128);
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999;
+    border-top: rem(2) solid #ddd;
+    .bottom_look {
+        height: rem(88);
+        width: rem(220);
+        border: solid rem(1) #6f2eb1;
+        border-radius: rem(40);
+        margin-top: rem(20);
+        margin-left: rem(20);
+        text-align: center;
+        float: left;
+        .i_cone_love {
+            width: rem(38);
+            height: rem(38);
+            position: relative;
+            top: rem(5);
+            color: #6f2eb1;
+            display: inline-block;
+            background: url('../../../image/icon_like_trailerdetails_livebroadcast@2x.png') no-repeat;
+            background-size: contain;
+        }
+        .look_val {
+            color: #6f2eb1;
+            line-height: rem(88);
+            font-size: rem(32);
+        }
+    }
+    .bottom_buy {
+        margin-top: rem(20);
+        margin-left: rem(20);
+        text-align: center;
+        color: #FFF;
+        width: rem(470);
+        height: rem(88);
+        line-height: rem(88);
+        border: rem(1) solid #6e2db0;
+        border-radius: rem(40);
+        background-image: -o-linear-gradient(to left, #a759d8, #6e2db0);
+        background-image: -ms-linear-gradient(to left, #a759d8, #6e2db0);
+        background-image: -webkit-linear-gradient(to left, #a759d8, #6e2db0);
+        background-image: linear-gradient(to left, #a759d8, #6e2db0);
+        display: inline-block;
+        font-size: rem(32);
+    }
 }
-.content{
 
-	.proDetail{
-		width:100%;
-		height:rem(220);
-		border-bottom:rem(2) solid #ddd;
-		.pro_title{
-			padding-top:rem(20);
-			width:rem(640);
-			height:rem(45);
-			font-size:rem(32);
-			letter-spacing:0;
-			word-break:break-all;
-			display:-webkit-box;
-			-webkit-line-clamp:1;
-			-webkit-box-orient:vertical;
-			overflow:hidden;
-		}
-		.active{
-
-			padding-top:rem(20);
-			font-size:rem(24);
-			color:#999;
-		}
-		.pro_money{
-			padding-top:rem(10);
-			height:rem(67);
-			width:100%;
-			.money_dis{
-				height:rem(67);
-				padding:0 rem(10);
-				font-size:rem(48);
-				color:#6f2eb1;
-				line-height:rem(67);
-			}
-			.money_dis::before{
-				content:"";
-				width:rem(42);
-				height:rem(42);
-			    top: 0.1rem;
-				position: relative;
-			    display: inline-block;
-				background:url('../../../image/icon_wabi_purple_vip@2x.png') no-repeat;
-				background-size:contain;
-			}
-			.money_cost{
-				color:#999;
-				font-size:rem(24);
-				text-decoration:line-through;
-			}
-		}
-	}
-	
-	.artist{
-		width:100%;
-		height:rem(407.4);
-		.artist_detail{
-			padding-top:rem(40)
-		}
-		.artist_logo{
-			padding-top:rem(10);
-			height:rem(200);
-			width:rem(720);
-			.artist-container{
-				width:100%;
-				height:100%;
-				font-size:rem(28);
-				color:#999;
-			   .swiper-slide {
-			        text-align: center;
-			        font-size: rem(32);
-			        background: #fff;
-			        width: rem(150);
-			        /* Center slide text vertically */
-			        display: -webkit-box;
-			        display: -ms-flexbox;
-			        display: -webkit-flex;
-			        display: flex;
-			        -webkit-box-pack: center;
-			        -ms-flex-pack: center;
-			        -webkit-justify-content: center;
-			        justify-content: center;
-			        -webkit-box-align: center;
-			        -ms-flex-align: center;
-			        -webkit-align-items: center;
-			        align-items: center;
-			    }
-			}
-		}
-	}
-	.liveMore{
-		height:rem(300);
-		.liveTitle{
-			width:100%;
-			height:rem(40);
-			padding-bottom:rem(20)
-		}
-		.liveVideo{
-			width:100%;
-			height:rem(240);
-		}
-	}
-	.liveOther{
-		padding:rem(70) 0;
-		height:rem(352);
-		.buy_know{
-			z-index:1;
-			width:100%;
-			height:rem(40);
-			padding-bottom:rem(20)
-		}
-		.liveVideo{
-			height:rem(192)
-		}
-	}
+.content {
+    .proDetail {
+        width: 100%;
+        height: rem(220);
+        border-bottom: rem(2) solid #ddd;
+        .pro_title {
+            padding-top: rem(20);
+            width: rem(640);
+            height: rem(45);
+            font-size: rem(32);
+            letter-spacing: 0;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .active {
+            padding-top: rem(20);
+            font-size: rem(24);
+            color: #999;
+        }
+        .pro_money {
+            padding-top: rem(10);
+            height: rem(67);
+            width: 100%;
+            .money_dis {
+                height: rem(67);
+                padding: 0 rem(10);
+                font-size: rem(48);
+                color: #6f2eb1;
+                line-height: rem(67);
+            }
+            .money_dis::before {
+                content: "";
+                width: rem(42);
+                height: rem(42);
+                top: 0.1rem;
+                position: relative;
+                display: inline-block;
+                background: url('../../../image/icon_wabi_purple_vip@2x.png') no-repeat;
+                background-size: contain;
+            }
+            .money_cost {
+                color: #999;
+                font-size: rem(24);
+                text-decoration: line-through;
+            }
+        }
+    }
+    .artist {
+        width: 100%;
+        height: rem(407.4);
+        .artist_detail {
+            padding-top: rem(40)
+        }
+        .artist_logo {
+            padding-top: rem(10);
+            height: rem(200);
+            width: rem(720);
+            .artist-container {
+                width: 100%;
+                height: 100%;
+                font-size: rem(28);
+                color: #999;
+                .swiper-slide {
+                    text-align: center;
+                    font-size: rem(32);
+                    background: #fff;
+                    width: rem(150);
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .liveMore {
+        height: rem(300);
+        .liveTitle {
+            width: 100%;
+            height: rem(40);
+            padding-bottom: rem(20)
+        }
+        .liveVideo {
+            width: 100%;
+            height: rem(240);
+        }
+    }
+    .liveOther {
+        padding: rem(70) 0;
+        height: rem(352);
+        .buy_know {
+            z-index: 1;
+            width: 100%;
+            height: rem(40);
+            padding-bottom: rem(20)
+        }
+        .liveVideo {
+            height: rem(192)
+        }
+    }
 }

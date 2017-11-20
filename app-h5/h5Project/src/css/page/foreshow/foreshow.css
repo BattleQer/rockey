@@ -1,6 +1,7 @@
 .banner {
   height: 8.96rem;
   width: 16rem;
+  margin: 0 auto;
 }
 .banner .banner_logo {
   width: 3.84rem;

@@ -7,7 +7,7 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, sans-serif;
 }
 
 li {
@@ -93,6 +93,7 @@ a {
   position: relative;
   width: 16rem;
   height: 3.8rem;
+  margin: 0 auto;
 }
 
 .playerDown {
@@ -196,7 +197,8 @@ a {
   right: 66px;
 }
 
-.songName, .songPlay {
+.songName,
+.songPlay {
   float: left;
 }
 
@@ -252,7 +254,8 @@ a {
   height: 0.21333rem;
 }
 
-.pro1, .pro2 {
+.pro1,
+.pro2 {
   position: absolute;
   left: 0;
   height: 100%;
@@ -270,7 +273,8 @@ a {
   width: 0rem;
 }
 
-.dian, .dian2 {
+.dian,
+.dian2 {
   display: block;
   margin-left: 2.1rem;
   width: 1.10933rem;
@@ -282,7 +286,8 @@ a {
 }
 
 /*fadein动画*/
-@-webkit-keyframes fadeIn/* Safari 和 Chrome */ {
+@-webkit-keyframes fadeIn
+/* Safari 和 Chrome */ {
   0% {
     opacity: 0;
   }
@@ -396,7 +401,8 @@ a {
     opacity: 1;
   }
 }
-@-moz-keyframes myfirst /* Firefox */ {
+@-moz-keyframes myfirst
+/* Firefox */ {
   0% {
     opacity: 0;
   }
@@ -434,7 +440,8 @@ a {
     opacity: 1;
   }
 }
-@-webkit-keyframes myfirst /* Safari 和 Chrome */ {
+@-webkit-keyframes myfirst
+/* Safari 和 Chrome */ {
   0% {
     opacity: 0;
   }
@@ -472,7 +479,8 @@ a {
     opacity: 1;
   }
 }
-@-o-keyframes myfirst /* Opera */ {
+@-o-keyframes myfirst
+/* Opera */ {
   0% {
     opacity: 0;
   }

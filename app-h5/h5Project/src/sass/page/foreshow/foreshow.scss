@@ -1,116 +1,116 @@
 $fontSize: 46.875; // 750px 宽度
 // 计算宽度
 @function rem($n) {
-  @return ($n / $fontSize) * 1rem;
-}
-.banner{
-	height:rem(420);
-	width:rem(750);
-	.banner_logo{
-		width:rem(180);
-		height:rem(66);
-		border-radius:rem(40);
-		background-color: rgba(0,0,0,0.3)!important;
-		background-color: #000;
-		filter:Alpha(opacity=30);
-		text-align:center;
-		line-height:rem(66);
-		margin-top:rem(303.46);
-		margin-right:rem(40);
-		z-index: 999;
-		float:right;
-		.banner_flag{
-			color:#fff;
-			text-align:center;
-			font-size:rem(28);
-			position:relative;
-
-		}
-	}
+    @return ($n / $fontSize) * 1rem;
 }
 
-.content{
-	.proDetail{
-		width:100%;
-		height:rem(178.6);
-		border-bottom:rem(2) solid #ddd;
-		.pro_title{
-			padding-top:rem(20);
-			width:rem(640);
-			height:rem(45);
-			font-size:rem(32);
-			letter-spacing:0;
-			word-break:break-all;
-			display:-webkit-box;
-			-webkit-line-clamp:1;
-			-webkit-box-orient:vertical;
-			overflow:hidden;
-		}
-		.pro_title::after{
-			content:"";
-			position:absolute;
-			width:rem(20);
-			height:rem(20);
-		    border-top: 1px solid #656565;
-		    border-right: 1px solid #656565;
-		    transform: rotate(45deg);
-			right:rem(20);
-		    -webkit-transform: rotate(45deg);
-		}
-		.active{
-			padding-top:rem(20);
-			font-size:rem(24);
-			color:#999;
-		}
-	}
-	
-	.artist{
-		width:100%;
-		height:rem(407.4);
-		.artist_detail{
-			padding-top:rem(40)
-		}
-		.artist_logo{
-			padding-top:rem(10);
-			height:rem(200);
-			width:rem(720);
-			.artist-container{
-				width:100%;
-				height:100%;
-				font-size:rem(28);
-				color:#999;
-			   .swiper-slide {
-			        text-align: center;
-			        font-size: rem(32);
-			        background: #fff;
-			        width: rem(150);
-			        /* Center slide text vertically */
-			        display: -webkit-box;
-			        display: -ms-flexbox;
-			        display: -webkit-flex;
-			        display: flex;
-			        -webkit-box-pack: center;
-			        -ms-flex-pack: center;
-			        -webkit-justify-content: center;
-			        justify-content: center;
-			        -webkit-box-align: center;
-			        -ms-flex-align: center;
-			        -webkit-align-items: center;
-			        align-items: center;
-			    }
-			}
-		}		
-	}
-	.liveMore{
-		height:auto;
-		.liveTitle{
-			width:100%;
-			height:rem(40);
-			padding-bottom:rem(20)
-		}
-		.liveVideo{
-			width:100%;
-			height:rem(406);
-		}
-	}
+.banner {
+    height: rem(420);
+    width: rem(750);
+    margin: 0 auto;
+    .banner_logo {
+        width: rem(180);
+        height: rem(66);
+        border-radius: rem(40);
+        background-color: rgba(0, 0, 0, 0.3)!important;
+        background-color: #000;
+        filter: Alpha(opacity=30);
+        text-align: center;
+        line-height: rem(66);
+        margin-top: rem(303.46);
+        margin-right: rem(40);
+        z-index: 999;
+        float: right;
+        .banner_flag {
+            color: #fff;
+            text-align: center;
+            font-size: rem(28);
+            position: relative;
+        }
+    }
+}
+
+.content {
+    .proDetail {
+        width: 100%;
+        height: rem(178.6);
+        border-bottom: rem(2) solid #ddd;
+        .pro_title {
+            padding-top: rem(20);
+            width: rem(640);
+            height: rem(45);
+            font-size: rem(32);
+            letter-spacing: 0;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .pro_title::after {
+            content: "";
+            position: absolute;
+            width: rem(20);
+            height: rem(20);
+            border-top: 1px solid #656565;
+            border-right: 1px solid #656565;
+            transform: rotate(45deg);
+            right: rem(20);
+            -webkit-transform: rotate(45deg);
+        }
+        .active {
+            padding-top: rem(20);
+            font-size: rem(24);
+            color: #999;
+        }
+    }
+    .artist {
+        width: 100%;
+        height: rem(407.4);
+        .artist_detail {
+            padding-top: rem(40)
+        }
+        .artist_logo {
+            padding-top: rem(10);
+            height: rem(200);
+            width: rem(720);
+            .artist-container {
+                width: 100%;
+                height: 100%;
+                font-size: rem(28);
+                color: #999;
+                .swiper-slide {
+                    text-align: center;
+                    font-size: rem(32);
+                    background: #fff;
+                    width: rem(150);
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .liveMore {
+        height: auto;
+        .liveTitle {
+            width: 100%;
+            height: rem(40);
+            padding-bottom: rem(20)
+        }
+        .liveVideo {
+            width: 100%;
+            height: rem(406);
+        }
+    }
 }

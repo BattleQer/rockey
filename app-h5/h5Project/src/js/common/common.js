@@ -3,7 +3,10 @@ require("../../css/common/common.css")
 const vue = require("vue")
 const NativeShare = require('nativeshare')
 require("jqueryui");
-
+// 关闭下载按钮
+    $(".down_close").click(function(){
+        $(".download_bottom,.download_backup").css('display','none');
+    })
 // 兼容性
 ! function(e) {
     function h() {
@@ -178,7 +181,7 @@ var app = new vue({
                 return $.ajax({
                     url: url,
                     data: param || {},
-                    type: type || 'GET',
+                    type: type || 'POST',
                     dataType: status || "jsonp",
                     jsonp: "callback",
                     crossDomain: true
@@ -210,8 +213,8 @@ function getSrceenWH() {
 }
 Object.showDialog = function(arg) {
     arg.click(function() {
-        $('html').css("overflow", "hidden");
-        $('body').css("overflow", "hidden");
+        $('html,body').css("overflow", "hidden");
+        // $('body').css("overflow", "hidden");
         className = $(this).attr('class');
         $('#dialogBg').fadeIn(300);
         $('#dialog').removeAttr('class').addClass('animated ' + className + '').fadeIn();
@@ -227,8 +230,8 @@ $(function() {
     getSrceenWH();
     //关闭弹窗
     $('.claseDialogBtn').click(function() {
-        $('html').css("overflow", "auto");
-        $('body').css("overflow", "auto");
+        $('html,body').css("overflow", "auto");
+        // $('body').css("overflow", "auto");
         $('#dialogBg').fadeOut(300, function() {
             $('#dialog').addClass('bounceOutUp').fadeOut();
         });

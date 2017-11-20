@@ -1,277 +1,651 @@
 $fontSize: 46.875; // 750px 宽度
 // 计算宽度
 @function rem($n) {
-  @return ($n / $fontSize) * 1rem;
+    @return ($n / $fontSize) * 1rem;
 }
 
-*{padding: 0;margin: 0;}
-body{width: 100%;height: 100%;font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;}
-li{list-style: none;}
-input{border:0;}
-input:focus{outline: none;}
-html { overflow-y: hidden;overflow-x:hidden;}
-a{text-decoration: none;}
-.clear:after{content: '.';clear: both;display: block;height: 0;visibility: hidden;font-size: 0;line-height: 0;}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+
 /*主体结构*/
-.blur{width: 100%;height: 100%;position: fixed;overflow: hidden;top: 0;bottom: 0;left: 0;right: 0;z-index: 0;}
-.playerMain{width: 100%;height: 100%;min-height: rem(1080);min-width: rem(750);transition:all 0.2s;}
-.top{position: absolute;top: 0;width: 100%;height: 56px;background: url("../../../image/T10MNqFzVXXXcu5FDa-20-20.png") repeat 0 0;}
+
+.blur {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.playerMain {
+    width: 100%;
+    height: 100%;
+    min-height: rem(1080);
+    min-width: rem(750);
+    transition: all 0.2s;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background: url("../../../image/T10MNqFzVXXXcu5FDa-20-20.png") repeat 0 0;
+}
+
 // .middle{position: absolute;top: 56px;bottom: 80px;background-color: #fff;width: 100%;}
-.mainWrap{position: relative;height: 100%;}
+.mainWrap {
+    position: relative;
+    height: 100%;
+}
+
+
 /*底部按键*/
-.bottom{position: absolute;left: 0;bottom: 0;width: 100%;height: rem(450);}
-.playerWrap{position: relative;height: 100%;}
-.playerCon{    
-	position: relative;
+
+.bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: rem(450);
+}
+
+.playerWrap {
+    position: relative;
+    height: 100%;
+}
+
+.playerCon {
+    position: relative;
     width: rem(750);
     height: 3.8rem;
-
+    margin: 0 auto;
 }
-.playerDown{
-	position: relative;
+
+.playerDown {
+    position: relative;
     width: rem(750);
     height: 2.8rem;
     margin: auto;
-    .downApp{
-		width:rem(585);
-		height:rem(81);
-		margin:0 auto;
-		background-image:-o-linear-gradient(to right, #a356d6, #702fb2);
-		background-image:-ms-linear-gradient(to right, #a356d6, #702fb2);  
-		background-image:-webkit-linear-gradient(to right, #a356d6, #702fb2); 
-		background-image:linear-gradient(to right, #a356d6, #702fb2);
-		border-radius:rem(50);
-		font-size:rem(32);
-		color:#fff;
-		text-align:center;
-		line-height:rem(81);
-		position: relative;
-	    top: 1rem;
-	}
-}
-.prevdown1{
-	background:url("../../../image/icon_musicplay_order.png") 100% 100% no-repeat ;
-}
-.prevdown2{
-	background:url("../../../image/icon_musicplay_nearplay.png") 100% 100% no-repeat ;
+    .downApp {
+        width: rem(585);
+        height: rem(81);
+        margin: 0 auto;
+        background-image: -o-linear-gradient(to right, #a356d6, #702fb2);
+        background-image: -ms-linear-gradient(to right, #a356d6, #702fb2);
+        background-image: -webkit-linear-gradient(to right, #a356d6, #702fb2);
+        background-image: linear-gradient(to right, #a356d6, #702fb2);
+        border-radius: rem(50);
+        font-size: rem(32);
+        color: #fff;
+        text-align: center;
+        line-height: rem(81);
+        position: relative;
+        top: 1rem;
+    }
 }
 
-.pbtn{width:2.8rem;height: 2.8rem;position: relative;display:inline-block;background-position: center;}
-.prevBtn{background:url("../../../image/icon_prev_music@2x.png") 100% 100% no-repeat ;background-position: center;}
-.playBtn{width:3.5rem;height:3.5rem;top: .3rem;position: relative;background:url("../../../image/icon_bofang_music@2x.png") 100% 100% no-repeat ;background-position: bottom;}
-.playBtn{width:3.5rem;height:3.5rem;top: .3rem;position: relative;background:url("../../../image/icon_stop_music.png") 100% 100% no-repeat ;background-position: center;}
-.nextBtn{background:url("../../../image/icon_next_music@2x.png") 100% 100% no-repeat ;background-position: center;}
-.playInfo{position: relative;}
-.trackInfo{position: absolute;width: 100%;height:18px;line-height: 18px;top: 20px;color: #fff;}
-.trackInfo a{color: #fff;font-size: 14px;text-decoration: none;}
-.trackCon{float: right;width: 100px;height: 18px;}
-.tc1{width: 18px;height: 18px;display: block;position: absolute;top: 0;right: 66px;}
-.songName,.songPlay{float: left;}
-.tc1{position: absolute;width: 18px;height: 18px;top: 0;right: 66px;background-image: url("../../../image/T1bMh.FxNXXXb_r3IF-72-730.png");background-position: 0 -241px;}
-.tc2{position: absolute;width: 18px;height: 18px;top: 0;right: 33px;background-image: url("../../../image/T1bMh.FxNXXXb_r3IF-72-730.png");background-position: 0 -259px;}
-.tc3{position: absolute;width: 18px;height: 18px;top: 0;right: 0;background-image: url("../../../image/T1bMh.FxNXXXb_r3IF-72-730.png");background-position: 0 -277px;}
-.position{line-height: rem(46.875);position: absolute;left:0;color: #a6a6a6;}
-.duration{line-height: rem(46.875);position: absolute;right:-.3rem;color: #a6a6a6;text-align: right;}
-.progress{position: absolute;left: rem(110);right: rem(100);height: rem(10);}
-.pro1,.pro2{position: absolute;left: 0;height: 100%;top: .4rem;width:10.3rem;max-width: 10.3rem;background-color:#a9a9a9}
-.pro2{
-	// background-color:#b064dc;
-	background-image:-o-linear-gradient(to right, #b064dc, #7834b7);
-	background-image:-ms-linear-gradient(to right, #b064dc, #7834b7);  
-	background-image:-webkit-linear-gradient(to right, #b064dc, #7834b7); 
-	background-image:linear-gradient(to right, #b064dc, #7834b7);
-	width:0rem;
+.prevdown1 {
+    background: url("../../../image/icon_musicplay_order.png") 100% 100% no-repeat;
 }
-.dian,.dian2{display: block;margin-left: 2.1rem;width: rem(52);height: rem(52);position: absolute;top:.48rem;background: url("../../../image/pic_dot_3x.png"); background-size: 100% 100%}
+
+.prevdown2 {
+    background: url("../../../image/icon_musicplay_nearplay.png") 100% 100% no-repeat;
+}
+
+.pbtn {
+    width: 2.8rem;
+    height: 2.8rem;
+    position: relative;
+    display: inline-block;
+    background-position: center;
+}
+
+.prevBtn {
+    background: url("../../../image/icon_prev_music@2x.png") 100% 100% no-repeat;
+    background-position: center;
+}
+
+.playBtn {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: .3rem;
+    position: relative;
+    background: url("../../../image/icon_bofang_music@2x.png") 100% 100% no-repeat;
+    background-position: bottom;
+}
+
+.playBtn {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: .3rem;
+    position: relative;
+    background: url("../../../image/icon_stop_music.png") 100% 100% no-repeat;
+    background-position: center;
+}
+
+.nextBtn {
+    background: url("../../../image/icon_next_music@2x.png") 100% 100% no-repeat;
+    background-position: center;
+}
+
+.playInfo {
+    position: relative;
+}
+
+.trackInfo {
+    position: absolute;
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    top: 20px;
+    color: #fff;
+}
+
+.trackInfo a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.trackCon {
+    float: right;
+    width: 100px;
+    height: 18px;
+}
+
+.tc1 {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 66px;
+}
+
+.songName,
+.songPlay {
+    float: left;
+}
+
+.tc1 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: 66px;
+    background-image: url("../../../image/T1bMh.FxNXXXb_r3IF-72-730.png");
+    background-position: 0 -241px;
+}
+
+.tc2 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: 33px;
+    background-image: url("../../../image/T1bMh.FxNXXXb_r3IF-72-730.png");
+    background-position: 0 -259px;
+}
+
+.tc3 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    right: 0;
+    background-image: url("../../../image/T1bMh.FxNXXXb_r3IF-72-730.png");
+    background-position: 0 -277px;
+}
+
+.position {
+    line-height: rem(46.875);
+    position: absolute;
+    left: 0;
+    color: #a6a6a6;
+}
+
+.duration {
+    line-height: rem(46.875);
+    position: absolute;
+    right: -.3rem;
+    color: #a6a6a6;
+    text-align: right;
+}
+
+.progress {
+    position: absolute;
+    left: rem(110);
+    right: rem(100);
+    height: rem(10);
+}
+
+.pro1,
+.pro2 {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: .4rem;
+    width: 10.3rem;
+    max-width: 10.3rem;
+    background-color: #a9a9a9
+}
+
+.pro2 {
+    // background-color:#b064dc;
+    background-image: -o-linear-gradient(to right, #b064dc, #7834b7);
+    background-image: -ms-linear-gradient(to right, #b064dc, #7834b7);
+    background-image: -webkit-linear-gradient(to right, #b064dc, #7834b7);
+    background-image: linear-gradient(to right, #b064dc, #7834b7);
+    width: 0rem;
+}
+
+.dian,
+.dian2 {
+    display: block;
+    margin-left: 2.1rem;
+    width: rem(52);
+    height: rem(52);
+    position: absolute;
+    top: .48rem;
+    background: url("../../../image/pic_dot_3x.png");
+    background-size: 100% 100%
+}
+
 
 /*fadein动画*/
-@-webkit-keyframes fadeIn/* Safari 和 Chrome */
+
+@-webkit-keyframes fadeIn
+/* Safari 和 Chrome */
+
 {
-0%   {opacity: 0;}
-10%	 {opacity: 0.1}
-20%	 {opacity: 0.2}
-20%  {opacity: 0.2;}
-30%  {opacity: 0.3;}
-40%  {opacity: 0.4;}
-50%  {opacity: 0.5;}
-60%  {opacity: 0.6;}
-70%  {opacity: 0.7;}
-80%  {opacity: 0.8;}
-90%  {opacity: 0.9;}
-100% {opacity: 1;}
-}
-@-moz-keyframes fadeIn
-{
-0%   {opacity: 0;}
-10%	 {opacity: 0.1}
-20%	 {opacity: 0.2}
-20%  {opacity: 0.2;}
-30%  {opacity: 0.3;}
-40%  {opacity: 0.4;}
-50%  {opacity: 0.5;}
-60%  {opacity: 0.6;}
-70%  {opacity: 0.7;}
-80%  {opacity: 0.8;}
-90%  {opacity: 0.9;}
-100% {opacity: 1;}
-}
-@keyframes myfirst
-{
-0%   {opacity: 0;}
-10%	 {opacity: 0.1}
-20%	 {opacity: 0.2}
-20%  {opacity: 0.2;}
-30%  {opacity: 0.3;}
-40%  {opacity: 0.4;}
-50%  {opacity: 0.5;}
-60%  {opacity: 0.6;}
-70%  {opacity: 0.7;}
-80%  {opacity: 0.8;}
-90%  {opacity: 0.9;}
-100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.2
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@-moz-keyframes myfirst /* Firefox */
-{
-0%   {opacity: 0;}
-10%	 {opacity: 0.1}
-20%	 {opacity: 0.2}
-20%  {opacity: 0.2;}
-30%  {opacity: 0.3;}
-40%  {opacity: 0.4;}
-50%  {opacity: 0.5;}
-60%  {opacity: 0.6;}
-70%  {opacity: 0.7;}
-80%  {opacity: 0.8;}
-90%  {opacity: 0.9;}
-100% {opacity: 1;}
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.2
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@-webkit-keyframes myfirst /* Safari 和 Chrome */
-{
-0%   {opacity: 0;}
-10%	 {opacity: 0.1}
-20%	 {opacity: 0.2}
-20%  {opacity: 0.2;}
-30%  {opacity: 0.3;}
-40%  {opacity: 0.4;}
-50%  {opacity: 0.5;}
-60%  {opacity: 0.6;}
-70%  {opacity: 0.7;}
-80%  {opacity: 0.8;}
-90%  {opacity: 0.9;}
-100% {opacity: 1;}
+@keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.2
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@-o-keyframes myfirst /* Opera */
+@-moz-keyframes myfirst
+/* Firefox */
+
 {
-0%   {opacity: 0;}
-10%	 {opacity: 0.1}
-20%	 {opacity: 0.2}
-20%  {opacity: 0.2;}
-30%  {opacity: 0.3;}
-40%  {opacity: 0.4;}
-50%  {opacity: 0.5;}
-60%  {opacity: 0.6;}
-70%  {opacity: 0.7;}
-80%  {opacity: 0.8;}
-90%  {opacity: 0.9;}
-100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.2
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-#canvas{opacity: 1;-webkit-animation: fadeIn 0.7s 0.1s ease both;
--moz-animation: fadeIn 0.7s 0.1s ease both;
--ms-animation: fadeIn 0.7s 0.1s ease both;
--o-animation: fadeIn 0.7s 0.1s ease both;
-animation: .7s ease 0.1s normal both 1 fadeIn;
+
+@-webkit-keyframes myfirst
+/* Safari 和 Chrome */
+
+{
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.2
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
+@-o-keyframes myfirst
+/* Opera */
+
+{
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1
+    }
+    20% {
+        opacity: 0.2
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#canvas {
+    opacity: 1;
+    -webkit-animation: fadeIn 0.7s 0.1s ease both;
+    -moz-animation: fadeIn 0.7s 0.1s ease both;
+    -ms-animation: fadeIn 0.7s 0.1s ease both;
+    -o-animation: fadeIn 0.7s 0.1s ease both;
+    animation: .7s ease 0.1s normal both 1 fadeIn;
+}
+
+
 /*播发列表*/
-.mainBody{
-	height: 100%;
-	.mainType{
-		padding-top:rem(80);
-		padding-bottom:rem(50);
-		width:100%;
-		margin:0 auto;
-		span{
-			width:rem(110);
-			height:rem(40);
-			text-align:center;
-			border:rem(2) #333 solid;
-			border-radius:rem(4);
-			font-size:rem(24);
-			display:inline-block;
-			line-height:rem(40);
-			margin-right:rem(20);
-		}
-	}
-	.mainImg{
-		width:rem(540);
-		height:rem(540);
-		margin:0 auto;
-		background: url("../../../image/weixin.png") no-repeat;
-	    background-size: contain;
-	}
-	.mainDel{
-		width:100%;
-		padding-top:rem(30);
-		div{
-			color:#999;
-			font-size:rem(24);
-			height:rem(33);
-			line-height:rem(33);
-			overflow:hidden;
-			margin:0 auto;
-		}
-		.mainDel_f{
-			width:rem(355)
-		}
-		.mainDel_s{
-			width:rem(550)
-		}
-	}
-	.swiper-pagination-bullets{
-		width:100%;
-		bottom:rem(-40);
-		.swiper-pagination-bullet{
-			margin-right:rem(15);
-			opacity:1;
-			width:rem(15);
-			height:rem(15);
-			background-color:#ddd;
-		}
-		.swiper-pagination-bullet-active{
-			background-color:#999;
 
-		}
-	}
+.mainBody {
+    height: 100%;
+    .mainType {
+        padding-top: rem(80);
+        padding-bottom: rem(50);
+        width: 100%;
+        margin: 0 auto;
+        span {
+            width: rem(110);
+            height: rem(40);
+            text-align: center;
+            border: rem(2) #333 solid;
+            border-radius: rem(4);
+            font-size: rem(24);
+            display: inline-block;
+            line-height: rem(40);
+            margin-right: rem(20);
+        }
+    }
+    .mainImg {
+        width: rem(540);
+        height: rem(540);
+        margin: 0 auto;
+        background: url("../../../image/weixin.png") no-repeat;
+        background-size: contain;
+    }
+    .mainDel {
+        width: 100%;
+        padding-top: rem(30);
+        div {
+            color: #999;
+            font-size: rem(24);
+            height: rem(33);
+            line-height: rem(33);
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .mainDel_f {
+            width: rem(355)
+        }
+        .mainDel_s {
+            width: rem(550)
+        }
+    }
+    .swiper-pagination-bullets {
+        width: 100%;
+        bottom: rem(-40);
+        .swiper-pagination-bullet {
+            margin-right: rem(15);
+            opacity: 1;
+            width: rem(15);
+            height: rem(15);
+            background-color: #ddd;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #999;
+        }
+    }
 }
-.mainOther{
-	position: relative;
-	margin:0 auto;
-	top: 0;
-	width: rem(750);
+
+.mainOther {
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    width: rem(750);
 }
+
 
 /*歌词部分*/
-#lyr{
-	width:rem(500);
-	height:rem(700);
-	margin:0 auto;
-	line-height:rem(90); 
-	font-size:rem(32);
-	text-align:center;
-	padding-top: rem(90);
-	font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', Helvetica, Arial, sans-serif;
-	color: #000;
-	overflow: hidden;
+
+#lyr {
+    width: rem(500);
+    height: rem(700);
+    margin: 0 auto;
+    line-height: rem(90);
+    font-size: rem(32);
+    text-align: center;
+    padding-top: rem(90);
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+    color: #000;
+    overflow: hidden;
 }
+
 // 进度条
-.playerLength{
-	width: 15rem;
+.playerLength {
+    width: 15rem;
     height: 1.5rem;
     font-size: .8rem;
     padding-top: .5rem;
     position: relative;
     margin: 0 auto;
 }
-
