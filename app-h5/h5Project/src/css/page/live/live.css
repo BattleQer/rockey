@@ -214,7 +214,7 @@ body {
   padding-top: 0.85333rem;
 }
 .content .artist .artist_logo {
-  padding-top: 0.21333rem;
+  padding-top: 0.85333rem;
   height: 4.26667rem;
   width: 15.36rem;
 }
@@ -230,10 +230,6 @@ body {
   background: #fff;
   width: 3.2rem;
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -242,6 +238,19 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.content .artist .artist_logo .artist-container .swiper-slide .artist_img {
+  height: 2.56rem;
+  width: 2.56rem;
+  background: url("../../../image/weixin.png") no-repeat;
+  border-radius: 0.10667rem;
+  background-size: contain;
+  display: inline-block;
+}
+.content .artist .artist_logo .artist-container .swiper-slide .artist_name {
+  display: inline-block;
+  color: #454545;
+  padding-top: 0.21333rem;
 }
 .content .liveMore {
   height: 6.4rem;
