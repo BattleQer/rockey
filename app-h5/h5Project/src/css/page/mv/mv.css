@@ -26,14 +26,15 @@
   width: 1.70667rem;
   height: 1.70667rem;
   background-position: center;
-  background: url("../../../image/weixin.png") no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 0.10667rem;
   float: left;
 }
 .page .content .mv-down .down_top .singer .singer_name {
   color: #999;
   font-weight: bold;
+  font-size: 0.896rem;
   line-height: 1.74933rem;
   padding-left: 0.21333rem;
 }
@@ -48,16 +49,21 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-size: 0.896rem;
 }
 .page .content .mv-down .down_top .singer_other {
   height: 1.28rem;
 }
 .page .content .mv-down .down_top .singer_other span {
   color: #999;
-  font-size: 0.512rem;
+  font-size: 0.704rem;
   height: 1.28rem;
   width: 7.38133rem;
+  line-height: 1.28rem;
   display: inline-block;
+}
+.page .content .mv-down .down_top .singer_other span:last-child {
+  text-align: right;
 }
 .page .content .mv-down .down_bottom {
   height: 2.98667rem;
@@ -118,6 +124,8 @@
 .page .content .mv-rec .rec_show .show_mv .mv {
   height: 4.30933rem;
   width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .page .content .mv-rec .rec_show .show_mv .mv_title {
   height: 0.96rem;
@@ -125,6 +133,7 @@
   padding-bottom: 0.08533rem;
   font-size: 0.68267rem;
   font-weight: bold;
+  overflow: hidden;
 }
 .page .content .mv-rec .rec_show .show_mv .mv_user {
   color: #999;

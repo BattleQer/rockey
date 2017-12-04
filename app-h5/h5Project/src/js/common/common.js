@@ -51,6 +51,13 @@ require("jqueryui");
     h()
 }(window);
 //end 
+var url_title="http://192.168.30.12:8091/group-app/music/";
+var h5_inter_url = {
+    getAlbum : url_title + 'home/',
+    getMusicList : url_title + 'album/detail',
+    getMusic : url_title + 'detail',
+    getMvDetail : url_title + 'mv/detail'
+}
 $("#radio").buttonset();
 var app = new vue({
         el: '#content',
@@ -110,27 +117,8 @@ var app = new vue({
                 id: "苏烈",
                 con: "顶顶顶"
             }, ],
-            albumList: [{
-                name: "A.I.N.I",
-                type1: false,
-                type2: true,
-                album: "what's going on"
-            }, {
-                name: "A.I.N.I",
-                type1: false,
-                type2: true,
-                album: "what's going on"
-            }, {
-                name: "A.I.N.I",
-                type1: false,
-                type2: true,
-                album: "what's going on"
-            }, {
-                name: "A.I.N.I",
-                type1: false,
-                type2: true,
-                album: "what's going on"
-            }],
+            albumList: [],
+            album:{},
             com_list: [{
                 img: "1111",
                 acc: "小甜甜的你",
@@ -162,19 +150,44 @@ var app = new vue({
                 love: "3454",
                 descrobe: "爱上迪欧hi欧委会去哦我12321312312312312312和日期我我哈熟地黄赛欧阿萨德撒回到拉萨好多了开啥店库里和所有表情最爱发这个的同学举个爪"
             }],
-            mvList: [{
-                title: "说你也一样爱着我",
-                user: "张栋梁"
-            }, {
-                title: "大男人情歌",
-                user: "梁汉文"
-            }]
+            mvList: [],
+            mv_detail:{},
+            mv_comment:[]
         },
         mounted: function() {
+            var self = this;
+            let params = {
+                id:"6335795956822310915"
+            }
+            self.handleAjax(h5_inter_url.getMusicList,params,"get").done(function(resp){
+                let musicList = resp.data;
+                app.albumList = musicList.musics;
+                app.album.count = musicList.musics.length +"首";
+                app.album.name = musicList.name;
+
+            });
+            self.handleAjax(h5_inter_url.getMvDetail,{id:1},'get').done(function(resp){
+                let musicList = resp.data;
+                app.mvList = musicList.recommendMvs;
+                setTimeout(function(){
+                    app.mvList.forEach(function(item,index){
+                        console.log(item.cover)
+                        $(".mv:eq("+index+")").css("background-image",'url('+item.cover+')')
+                    })
+                    // $(".singer_img").css("background-image","url("+img+")")
+                })
+                app.mv_detail.views = musicList.views + "次播放";
+                app.mv_detail.name = musicList.name;
+                app.mv_detail.singer = musicList.singer;
+                app.mv_detail.putawayTime = musicList.putawayTime;
+                app.mv_comment = musicList.commentList;
+                var img = musicList.singerAvatar;
+                console.log(img);
+            });
 
         },
         methods: {
-            ajaxq: function ajax(url, param, type, status, flag) {
+            ajaxq: function(url, param, type, status, flag) {
                 // 利用了jquery延迟对象回调的方式对ajax封装，使用done()，fail()，always()等方法进行链式回调操作
                 // 如果需要的参数更多，比如有跨域dataType需要设置为'jsonp'等等，也可以不做这一层封装，还是根据工程实际情况判断吧，重要的还是链式回调
                 // status 作为跨越和不跨域的处理 crossDomain 是否以文本流形式
@@ -182,9 +195,9 @@ var app = new vue({
                     url: url,
                     data: param || {},
                     type: type || 'POST',
-                    dataType: status || "jsonp",
-                    jsonp: "callback",
-                    crossDomain: true
+                    dataType: status || "json",
+                    // jsonp: "callback",
+                    // crossDomain: true
                 });
             },
             handleAjax: function(url, param, type, status, flag) {
